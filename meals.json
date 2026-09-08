@@ -46,5 +46,35 @@
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08"
+  },
+  {
+    "id": "mexican-beef-and-rice-skillet",
+    "title": "Mexican Beef and Rice Skillet",
+    "source": "https://www.savorynothings.com/mexican-beef-and-rice-skillet/",
+    "notes": "One-pot; rice goes in uncooked, don't pre-cook it",
+    "protein": "ground beef",
+    "carbBase": "rice",
+    "ingredients": [
+      "1 tablespoon olive oil",
+      "1 large onion, chopped",
+      "2 cloves garlic, minced",
+      "1 pound ground beef",
+      "1 red pepper, diced",
+      "1 yellow pepper, diced",
+      "1 tablespoon tomato paste",
+      "1 tablespoon taco seasoning",
+      "salt & pepper, to taste",
+      "1 cup rice (parboiled preferred)",
+      "1.5 cups broth (or more if it seems dry)",
+      "1 jar (16-oz) chunky salsa",
+      "1 can (15-oz) black beans",
+      "1 cup sweet corn (canned or frozen)",
+      "Shredded cheese, lime wedges, sour cream, chopped tomatoes, cilantro, avocado, tortilla chips (optional, to serve)"
+    ],
+    "status": "idea",
+    "day": null,
+    "rating": null,
+    "feedback": "",
+    "addedDate": "2026-09-08"
   }
 ]
