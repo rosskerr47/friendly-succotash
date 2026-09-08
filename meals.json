@@ -32,5 +32,19 @@
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08"
+  },
+  {
+    "id": "meatballs-and-spaghetti",
+    "title": "Meatballs and Spaghetti",
+    "source": "",
+    "notes": "",
+    "protein": "beef/pork mince (unconfirmed)",
+    "carbBase": "spaghetti",
+    "ingredients": [],
+    "status": "idea",
+    "day": null,
+    "rating": null,
+    "feedback": "",
+    "addedDate": "2026-09-08"
   }
 ]
