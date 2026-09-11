@@ -384,10 +384,22 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
 });
 
 /* ---- render ---- */
+function proteinLabel(protein){
+  return (protein || '').trim() || 'Unspecified';
+}
+function sortByProtein(list){
+  return [...list].sort((a, b) => {
+    const pa = proteinLabel(a.protein).toLowerCase();
+    const pb = proteinLabel(b.protein).toLowerCase();
+    if(pa !== pb) return pa.localeCompare(pb);
+    return a.title.localeCompare(b.title);
+  });
+}
+
 function renderAll(){ renderBoard(); renderWeek(); renderPickList(); }
 
 function renderBoard(){
-  const active = ideas.filter(i => i.status !== 'cooked');
+  const active = sortByProtein(ideas.filter(i => i.status !== 'cooked'));
   const cooked = ideas.filter(i => i.status === 'cooked').sort((a,b)=> (b.rating||0)-(a.rating||0));
 
   const activeEl = document.getElementById('active-list');
@@ -536,17 +548,28 @@ function currentWeekDates(){
 
 function renderWeek(){
   const wrap = document.getElementById('week-list');
-  const candidates = ideas.filter(i => i.status !== 'cooked');
+  const candidates = sortByProtein(ideas.filter(i => i.status !== 'cooked'));
   const todayStr = new Date().toDateString();
   wrap.innerHTML = '';
   currentWeekDates().forEach(({name, date}) => {
     const assigned = candidates.find(i => i.day === name);
     const card = document.createElement('div');
     card.className = 'day-card' + (date.toDateString() === todayStr ? ' today' : '');
-    const options = [`<option value="">— open —</option>`].concat(candidates.map(i => `<option value="${i.id}" ${assigned && assigned.id === i.id ? 'selected' : ''}>${esc(i.title)}</option>`));
+    let optionsHtml = `<option value="">— open —</option>`;
+    let currentGroup = null;
+    candidates.forEach(i => {
+      const group = proteinLabel(i.protein);
+      if(group !== currentGroup){
+        if(currentGroup !== null) optionsHtml += `</optgroup>`;
+        optionsHtml += `<optgroup label="${esc(group)}">`;
+        currentGroup = group;
+      }
+      optionsHtml += `<option value="${i.id}" ${assigned && assigned.id === i.id ? 'selected' : ''}>${esc(i.title)}</option>`;
+    });
+    if(currentGroup !== null) optionsHtml += `</optgroup>`;
     card.innerHTML = `
       <div class="day-label"><div class="day-name">${name}</div><div class="day-date">${date.toLocaleDateString('en-AU', {day:'numeric', month:'short'})}</div></div>
-      <select class="day-select" data-day="${name}">${options.join('')}</select>
+      <select class="day-select" data-day="${name}">${optionsHtml}</select>
     `;
     wrap.appendChild(card);
   });
