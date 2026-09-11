@@ -4,7 +4,7 @@
     "title": "Butterfly chicken roast",
     "source": "",
     "notes": "",
-    "protein": "Chicken",
+    "protein": "chicken",
     "ingredients": [
       "Butterfly chicken",
       "Vegetables"
@@ -19,7 +19,7 @@
     "title": "Chicken and Leek Pie",
     "source": "https://www.recipetineats.com/chicken-and-leek-pie/",
     "notes": "",
-    "protein": "chicken thighs",
+    "protein": "chicken",
     "carbBase": "puff pastry",
     "ingredients": [
       "50g unsalted butter",
@@ -54,7 +54,7 @@
     "title": "Meatballs and Spaghetti",
     "source": "",
     "notes": "",
-    "protein": "beef/pork mince (unconfirmed)",
+    "protein": "pork",
     "carbBase": "spaghetti",
     "ingredients": [],
     "status": "planned",
@@ -69,7 +69,7 @@
     "title": "Mexican Beef and Rice Skillet",
     "source": "https://www.savorynothings.com/mexican-beef-and-rice-skillet/",
     "notes": "One-pot; rice goes in uncooked, don't pre-cook it",
-    "protein": "ground beef",
+    "protein": "beef",
     "carbBase": "rice",
     "ingredients": [
       "1 tablespoon olive oil",
@@ -100,7 +100,7 @@
     "title": "Thai Beef Bowls with Zingy Salad",
     "source": "Cookbook: Magic Mince, p.186",
     "notes": "Serves 4. Prep 20 min, cook 20 min.",
-    "protein": "beef mince",
+    "protein": "beef",
     "carbBase": "jasmine/coconut rice",
     "ingredients": [
       "1 tablespoon extra-virgin olive oil",
@@ -140,7 +140,7 @@
     "title": "One-Pot Lasagne",
     "source": "Cookbook, p.118 (One pot, pan or tray)",
     "notes": "Serves 8. Prep 15 min, cook 65 min.",
-    "protein": "beef mince",
+    "protein": "beef",
     "carbBase": "lasagne sheets",
     "ingredients": [
       "3 tablespoons extra-virgin olive oil",
@@ -172,7 +172,7 @@
     "title": "Chicken Korma Bake",
     "source": "Cookbook, p.136 (Comforting classics)",
     "notes": "Serves 4. Prep 10 min, cook 45 min, plus 10 min resting. One-dish bake with rice built in.",
-    "protein": "chicken thighs",
+    "protein": "chicken",
     "carbBase": "basmati rice",
     "ingredients": [
       "800 g chicken thigh fillets (approx. 5-6 thighs)",
@@ -218,7 +218,7 @@
     "title": "Crispy Salt & Pepper Tofu",
     "source": "Cookbook, p.110 (Stir-fries & Noodles)",
     "notes": "Serves 3 as a main with rice. Prep 10 min + 30 min tofu pressing. Cook 10 min. Pan-fried, not deep-fried. Serve with rice or steamed Asian greens.",
-    "protein": "tofu (meat-free)",
+    "protein": "tofu",
     "carbBase": "rice (side, not included in this recipe)",
     "ingredients": [
       "500 g firm or hard tofu",
@@ -246,7 +246,7 @@
     "title": "Cashew Chicken",
     "source": "Cookbook, p.104 (Stir-fries & Noodles)",
     "notes": "Serves 4 with rice. Prep 8 min + 10 min (or overnight) marinating. Cook 7 min.",
-    "protein": "chicken thigh",
+    "protein": "chicken",
     "carbBase": "rice (side, not included in this recipe)",
     "ingredients": [
       "500 g chicken thigh fillets, cut into 2.5 cm pieces",
@@ -278,7 +278,7 @@
     "title": "One-Pot Chicken & Broccoli Pasta Bake",
     "source": "Cookbook, p.112 (One pot, pan or tray)",
     "notes": "Serves 4. Prep 15 min, cook 40 min.",
-    "protein": "chicken breast",
+    "protein": "chicken",
     "carbBase": "pasta bows",
     "ingredients": [
       "1 tablespoon extra-virgin olive oil",
@@ -307,7 +307,7 @@
     "title": "Cauliflower Mac & Cheese",
     "source": "Cookbook, p.136 (Everyone loves pasta)",
     "notes": "Serves 6. Prep 25 min, cook 1 hour. Vegetable stock used, no meat. Tip: chop cauliflower very finely if kids might spot it.",
-    "protein": "none (meat-free)",
+    "protein": "none",
     "carbBase": "macaroni",
     "ingredients": [
       "1 tablespoon extra-virgin olive oil",
@@ -344,7 +344,7 @@
     "title": "Japanese Crumbed Pork with Tonkatsu Sauce & Slaw",
     "source": "Cookbook, p.168 (Fast & fresh)",
     "notes": "Serves 4. Prep 25 min, cook 10 min. Served with slaw, no rice/pasta in the recipe as written.",
-    "protein": "pork cutlets",
+    "protein": "pork",
     "carbBase": "none specified (breadcrumb-crusted, served with slaw)",
     "ingredients": [
       "4 x 175 g boneless pork cutlets (or loin fillets)",
@@ -382,7 +382,7 @@
     "id": "fish-and-vegetables",
     "title": "Fish & Vegetables",
     "source": "",
-    "notes": "Generic go-to, not a specific recipe — whatever fish and veg are on hand/fresh that week.",
+    "notes": "Generic go-to, not a specific recipe \u2014 whatever fish and veg are on hand/fresh that week.",
     "protein": "fish",
     "carbBase": "none (vegetables, not a starchy carb)",
     "ingredients": [
@@ -402,7 +402,7 @@
     "title": "Cheesy Chicken & Broccolini Rice",
     "source": "Cookbook, p.112 (One-pan)",
     "notes": "Serves 6. Prep 10 min, cook 30 min. One-pan risotto-style. Recipe explicitly supports make-ahead veg/chicken prep and reheats well (best reheated in microwave, piping hot).",
-    "protein": "chicken thigh",
+    "protein": "chicken",
     "carbBase": "arborio rice",
     "ingredients": [
       "1 tablespoon olive oil",
@@ -434,7 +434,7 @@
     "title": "One-Pot Paprika Chicken & Rice",
     "source": "Cookbook, p.115 (One-pan)",
     "notes": "Serves 4. Prep 5 min, cook 15 min + 10 min resting. Chicken can be marinated up to 3 days ahead. Leftovers keep 3 days, reheat in microwave, not suitable to freeze.",
-    "protein": "chicken thigh (bone-in, skin-on)",
+    "protein": "chicken",
     "carbBase": "white rice (jasmine or basmati)",
     "ingredients": [
       "1.2 kg bone-in, skin-on chicken thigh cutlets (5-6 cutlets)",
@@ -470,7 +470,7 @@
     "title": "Southern 'Fried' Baked Chicken Strips",
     "source": "Cookbook, p.150 (Comforting classics)",
     "notes": "Serves 4. Prep 15 min, cook 30 min + 10 min resting. Ranch dressing makes up to 3 days ahead; leftover chicken and salad store separately up to 3 days, reheat chicken in oven 200C or air fryer 5-8 min to keep it crisp (don't microwave). Served with sweet potato fries.",
-    "protein": "chicken tenderloins",
+    "protein": "chicken",
     "carbBase": "sweet potato fries (side) / flour-panko coating",
     "ingredients": [
       "sweet potato fries, to serve",
@@ -520,7 +520,7 @@
     "title": "Three-Cup Chicken Noodles",
     "source": "Cookbook",
     "notes": "Serves 4. Prep 10 min, cook 6 min. One pan. Stir-fry sauce can be mixed up to 3 days ahead and stored in the fridge. Leftovers keep in an airtight container in the fridge up to 3 days, not suitable to freeze.",
-    "protein": "chicken thigh",
+    "protein": "chicken",
     "carbBase": "udon noodles",
     "ingredients": [
       "2 tablespoons extra-virgin olive oil",
@@ -548,7 +548,7 @@
     "title": "Shepherd's Pie & Cottage Pie",
     "source": "Cookbook, p.290-291 (Bigger Things)",
     "notes": "Serves 8. Prep 20 min + 2 hours cooling (overnight refrigeration optional), cook 1 hour 45 min. Use lamb mince for shepherd's pie, beef mince for cottage pie - same recipe otherwise. Make ahead: assemble but don't bake, refrigerate up to 4 days or freeze 3 months, then bake as per recipe when ready. Leftovers: fridge 4 days, freezer 3 months.",
-    "protein": "lamb or beef mince",
+    "protein": "beef",
     "carbBase": "mashed potato",
     "ingredients": [
       "-- Filling --",
@@ -593,7 +593,7 @@
     "title": "Chicken Shawarma",
     "source": "Cookbook, p.46 (Everyday Food)",
     "notes": "Serves 4. Prep 15 min + 12-24 hours marinating, cook 15 min. Marinate ahead 12-24 hrs (that's part of the recipe, not extra make-ahead). Yoghurt sauce keeps 3 days. Leftovers fridge 4 days, not freezer-suitable once cooked, though uncooked marinated chicken freezes 3 months.",
-    "protein": "chicken thigh",
+    "protein": "chicken",
     "carbBase": "flatbread",
     "ingredients": [
       "1 kg skinless, boneless chicken thighs",
@@ -633,7 +633,7 @@
     "title": "Spicy Sichuan Pork Noodles",
     "source": "Cookbook, p.64 (Effortless)",
     "notes": "Serves 2 only - scale up for the household. Prep 10 min, cook 8 min. High-heat char on beans/noodles is the point of the dish, best fresh. Leftovers fridge 3 days, not suitable for freezing. Note: pork works best but beef, chicken or turkey mince also fine as a swap.",
-    "protein": "pork mince",
+    "protein": "pork",
     "carbBase": "fresh Shanghai or hokkien noodles",
     "ingredients": [
       "-- Secret spicy Asian sauce --",
@@ -661,7 +661,7 @@
     "title": "One-Pot Sausage Meatball Pasta",
     "source": "Cookbook, p.74 (Effortless)",
     "notes": "Serves 4-5. Prep 15 min, cook 35 min. Sausages cut into pieces as a meatball shortcut - use good-quality thin sausages (90%+ meat). Leftovers fridge 4 days, freezer 3 months, fully thaw then microwave to reheat.",
-    "protein": "beef or pork sausage",
+    "protein": "pork",
     "carbBase": "rigatoni",
     "ingredients": [
       "1 1/2 tbsp extra-virgin olive oil",
@@ -694,7 +694,7 @@
     "title": "Vietnamese Shaking Beef (Bo Luc Lac)",
     "source": "Cookbook, p.100 (Stir-fries & Noodles)",
     "notes": "Serves 2 only - scale up for the household. Prep 5 min + 24-48 hours marinating, cook 3 min. Rump steak (or scotch fillet/porterhouse/sirloin) tenderised with bicarb. Best made fresh, not suitable for freezing. Recipe suggests serving with Fluffy Coconut Rice and smashed cucumber (sides not included here).",
-    "protein": "beef rump steak",
+    "protein": "beef",
     "carbBase": "none specified (suggested side: coconut rice)",
     "ingredients": [
       "300 g beef rump steak, cut into 2.5 cm cubes",
@@ -726,7 +726,7 @@
     "title": "Vietnamese Caramel Pork Mince",
     "source": "Cookbook, p.113 (Stir-fries & Noodles)",
     "notes": "Serves 4. Prep 5 min, cook 10 min. Can also be made with chicken, turkey, or beef mince instead of pork. Serve over rice or vermicelli noodles (not included in ingredients). Leftovers fridge 4 days, freezer 3 months.",
-    "protein": "pork mince",
+    "protein": "pork",
     "carbBase": "none specified (suggested: rice or vermicelli noodles)",
     "ingredients": [
       "1 1/2 tbsp canola oil",
