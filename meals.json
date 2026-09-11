@@ -9,9 +9,9 @@
       "Butterfly chicken",
       "Vegetables"
     ],
-    "status": "planned",
+    "status": "idea",
     "addedDate": "2026-09-11T22:05:31.004Z",
-    "day": "Wed",
+    "day": null,
     "makeAhead": false
   },
   {
@@ -57,7 +57,7 @@
     "protein": "beef/pork mince (unconfirmed)",
     "carbBase": "spaghetti",
     "ingredients": [],
-    "status": "planned",
+    "status": "idea",
     "day": null,
     "rating": null,
     "feedback": "",
@@ -160,8 +160,8 @@
       "2 x 125 g fresh buffalo mozzarella balls, cut into thick slices",
       "basil leaves, to serve (optional)"
     ],
-    "status": "planned",
-    "day": "Mon",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -235,7 +235,7 @@
       "1/4 tsp caster sugar"
     ],
     "status": "planned",
-    "day": "Thu",
+    "day": "Mon",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -390,8 +390,8 @@
       "Packet rice",
       "Vegetables"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Wed",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -422,8 +422,8 @@
       "50 g (1/2 cup) freshly grated parmesan, plus extra to garnish",
       "1 tablespoon chopped flat-leaf parsley"
     ],
-    "status": "planned",
-    "day": "Tue",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -581,8 +581,8 @@
       "30 g unsalted butter, melted",
       "chopped parsley, to serve (optional)"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Thu",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -682,8 +682,8 @@
       "1 1/2 cups (150 g) shredded colby cheese (or any melting cheese)",
       "1 tsp finely chopped parsley, to serve (optional)"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Tue",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -714,8 +714,8 @@
       "1 tsp freshly ground black pepper",
       "1/8 tsp fish sauce"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Sun",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
