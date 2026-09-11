@@ -127,10 +127,6 @@
     <div class="rules-line">Rules: no repeated protein · at least one meat-free night · at least 2 make-ahead meals · week runs Sun–Thu</div>
   </header>
 
-  <div class="backup-row">
-    <button class="btn btn-ghost btn-small" id="export-btn">Export backup (.json)</button>
-    <button class="btn btn-ghost btn-small" id="refresh-btn">Refresh from GitHub</button>
-  </div>
   <div id="sync-status" class="sync-status">not connected — set up GitHub in Settings</div>
 
   <nav class="tabs">
@@ -232,6 +228,11 @@
       <div class="receipt-actions"><button class="btn btn-ghost btn-small" id="copy-btn" style="flex:1;">Copy list to paste into Woolworths</button></div>
       <div class="copy-flash" id="copy-flash"></div>
     </div>
+  </div>
+
+  <div class="backup-row" style="margin-top:32px;padding-top:16px;border-top:1px solid var(--line);">
+    <button class="btn btn-ghost btn-small" id="export-btn">Export backup (.json)</button>
+    <button class="btn btn-ghost btn-small" id="refresh-btn">Refresh from GitHub</button>
   </div>
 </div>
 
