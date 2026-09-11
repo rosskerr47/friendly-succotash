@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Weekly Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#262A22; --paper:#EDEAE0; --paper-2:#E1DDCE; --card:#FAF8F1;
+    --mustard:#C89B3C; --mustard-deep:#A87E28; --sage:#56684A; --sage-deep:#414F38;
+    --brick:#A44A32; --line: rgba(38,42,34,0.14);
+    --font-display:'Fraunces',serif; --font-mono:'IBM Plex Mono',monospace; --font-body:'Work Sans',sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:640px;margin:0 auto;padding:20px 16px 80px;}
+
+  header.top{padding:6px 2px 18px;}
+  header.top .eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-deep);margin-bottom:4px;}
+  header.top h1{font-family:var(--font-display);font-weight:600;font-size:34px;line-height:1.05;margin:0 0 6px;letter-spacing:-0.01em;}
+  header.top p{margin:0;color:rgba(38,42,34,0.65);font-size:14.5px;line-height:1.45;}
+  header.top .rules-line{margin-top:8px;font-family:var(--font-mono);font-size:11px;color:var(--sage-deep);}
+
+  .backup-row{display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap;}
+  .sync-status{font-family:var(--font-mono);font-size:11px;color:rgba(38,42,34,0.4);margin-bottom:4px;padding:2px;}
+  .sync-status.warn{color:var(--brick);background:#F4E3DC;padding:8px 10px;border-radius:8px;font-weight:600;}
+  .sync-status.ok{color:var(--sage-deep);}
+
+  nav.tabs{display:flex;gap:6px;margin:14px 0 18px;background:var(--paper-2);padding:4px;border-radius:12px;}
+  nav.tabs button{flex:1;border:none;background:transparent;padding:10px 6px;font-family:var(--font-body);font-weight:600;font-size:12.5px;color:rgba(38,42,34,0.55);border-radius:9px;cursor:pointer;}
+  nav.tabs button.active{background:var(--card);color:var(--ink);box-shadow:0 1px 2px rgba(38,42,34,0.12);}
+
+  .panel{display:none;} .panel.active{display:block;}
+
+  .add-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:20px;}
+  .add-card h2{font-family:var(--font-display);font-size:18px;margin:0 0 12px;font-weight:600;}
+  .field{margin-bottom:10px;}
+  .field label{display:block;font-size:11.5px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;color:rgba(38,42,34,0.55);margin-bottom:5px;}
+  input[type=text], input[type=password], textarea{width:100%;border:1px solid var(--line);background:#fff;border-radius:9px;padding:10px 11px;font-family:var(--font-body);font-size:14.5px;color:var(--ink);resize:vertical;}
+  textarea{min-height:64px;line-height:1.5;}
+  input:focus, textarea:focus{outline:2px solid var(--mustard);outline-offset:1px;}
+  .field-hint{font-size:11.5px;color:rgba(38,42,34,0.45);margin-top:4px;line-height:1.4;}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:none;border-radius:9px;padding:11px 16px;font-family:var(--font-body);font-weight:600;font-size:14px;cursor:pointer;}
+  .btn:active{transform:scale(0.97);}
+  .btn-primary{background:var(--sage);color:#fff;width:100%;}
+  .btn-ghost{background:transparent;color:var(--sage-deep);border:1px solid var(--line);}
+  .btn-mustard{background:var(--mustard);color:var(--ink);}
+  .btn-small{padding:7px 11px;font-size:12.5px;border-radius:7px;}
+  .btn:disabled{opacity:0.5;cursor:not-allowed;}
+
+  .section-label{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(38,42,34,0.5);margin:22px 2px 10px;}
+  .empty{padding:26px 16px;text-align:center;color:rgba(38,42,34,0.45);font-size:14px;border:1px dashed var(--line);border-radius:12px;}
+
+  .idea{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:14px 15px;margin-bottom:10px;}
+  .idea-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;}
+  .idea-title{font-family:var(--font-display);font-weight:600;font-size:17px;line-height:1.25;}
+  .idea-source{font-family:var(--font-mono);font-size:11px;color:var(--sage-deep);margin-top:3px;word-break:break-all;}
+  .badge{font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:3px 7px;border-radius:100px;white-space:nowrap;flex-shrink:0;}
+  .badge-idea{background:var(--paper-2);color:rgba(38,42,34,0.6);}
+  .badge-planned{background:#F1E3C2;color:var(--mustard-deep);}
+  .idea-notes{font-size:13.5px;color:rgba(38,42,34,0.72);margin-top:8px;line-height:1.45;}
+  .idea-ingredients{font-size:12.5px;color:rgba(38,42,34,0.5);margin-top:6px;font-family:var(--font-mono);}
+  .idea-actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;align-items:center;}
+
+  .cook-form{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);}
+  .stars{display:flex;gap:4px;margin-bottom:10px;}
+  .star{font-size:24px;cursor:pointer;color:var(--line);user-select:none;}
+  .star.on{color:var(--mustard);}
+
+  .cooked-card{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:14px 15px;margin-bottom:10px;}
+  .cooked-top{display:flex;justify-content:space-between;align-items:center;gap:10px;}
+  .cooked-title{font-family:var(--font-display);font-weight:600;font-size:16px;}
+  .cooked-stars{font-size:14px;color:var(--mustard);letter-spacing:1px;white-space:nowrap;}
+  .cooked-feedback{font-size:13.5px;color:rgba(38,42,34,0.68);margin-top:6px;line-height:1.45;font-style:italic;}
+  .cooked-meta{font-family:var(--font-mono);font-size:10.5px;color:rgba(38,42,34,0.4);margin-top:8px;}
+
+  .day-select-inline{border:1px solid var(--line);background:#fff;border-radius:7px;padding:6px 8px;font-family:var(--font-body);font-weight:600;font-size:12.5px;color:var(--mustard-deep);}
+
+  .day-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:8px;display:flex;align-items:center;gap:12px;}
+  .day-card.today{border-color:var(--mustard);box-shadow:0 0 0 1px var(--mustard) inset;}
+  .day-label{width:74px;flex-shrink:0;}
+  .day-name{font-family:var(--font-display);font-weight:600;font-size:15px;}
+  .day-date{font-family:var(--font-mono);font-size:10.5px;color:rgba(38,42,34,0.45);}
+  .day-select{flex:1;border:1px solid var(--line);background:#fff;border-radius:8px;padding:9px 10px;font-family:var(--font-body);font-size:13.5px;color:var(--ink);}
+
+  .pick-row{display:flex;align-items:flex-start;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:11px;padding:12px 13px;margin-bottom:8px;cursor:pointer;}
+  .pick-row input[type=checkbox]{margin-top:3px;width:17px;height:17px;accent-color:var(--sage);flex-shrink:0;}
+  .pick-row .pt{font-weight:600;font-size:14.5px;}
+  .pick-row .ps{font-family:var(--font-mono);font-size:11px;color:var(--sage-deep);margin-top:2px;}
+  .pick-row .pn{font-size:12px;color:rgba(38,42,34,0.4);margin-top:3px;}
+
+  .receipt-wrap{margin-top:22px;}
+  .receipt{background:#fff;color:#2A2A26;font-family:var(--font-mono);font-size:13px;line-height:1.6;padding:22px 20px 6px;box-shadow:0 6px 18px rgba(38,42,34,0.18);transform:rotate(-0.6deg);}
+  .receipt-edge{height:12px;background-image:linear-gradient(135deg,var(--paper) 25%,transparent 25%),linear-gradient(225deg,var(--paper) 25%,transparent 25%);background-size:16px 16px;background-position:left top;background-color:#fff;}
+  .receipt-edge.bottom{background-image:linear-gradient(45deg,var(--paper) 25%,transparent 25%),linear-gradient(315deg,var(--paper) 25%,transparent 25%);background-position:left bottom;}
+  .receipt h3{font-family:var(--font-display);font-size:18px;text-align:center;margin:0 0 2px;}
+  .receipt .rdate{text-align:center;font-size:10.5px;color:#8a8a80;margin-bottom:14px;}
+  .receipt .rgroup-title{font-weight:600;margin-top:14px;padding-bottom:4px;border-bottom:1px dashed #cfcfc4;}
+  .receipt ul{list-style:none;margin:6px 0 0;padding:0;}
+  .receipt li{padding:2px 0;} .receipt li:before{content:"– ";}
+  .receipt .rtotal{margin-top:16px;padding-top:10px;border-top:1px dashed #cfcfc4;text-align:center;font-size:11px;color:#8a8a80;}
+  .receipt-actions{display:flex;gap:8px;margin-top:14px;}
+  .copy-flash{font-family:var(--font-mono);font-size:11px;color:var(--sage-deep);margin-top:8px;text-align:center;}
+
+  .loading{text-align:center;padding:40px 0;color:rgba(38,42,34,0.4);font-family:var(--font-mono);font-size:12.5px;}
+
+  .settings-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:16px;}
+  .settings-card h2{font-family:var(--font-display);font-size:18px;margin:0 0 4px;font-weight:600;}
+  .settings-card .sub{font-size:13px;color:rgba(38,42,34,0.6);margin-bottom:14px;line-height:1.45;}
+  .checkbox-row{display:flex;align-items:center;gap:8px;margin:10px 0 14px;}
+  .checkbox-row input{width:16px;height:16px;accent-color:var(--sage);}
+  .checkbox-row label{font-size:13px;color:rgba(38,42,34,0.7);}
+  .steps{font-size:12.5px;color:rgba(38,42,34,0.6);line-height:1.6;background:var(--paper-2);border-radius:9px;padding:12px 13px;margin-bottom:14px;}
+  .steps b{color:var(--ink);}
+  .steps a{color:var(--sage-deep);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="eyebrow">Household · Meal Planning</div>
+    <h1>The Weekly Board</h1>
+    <p>Drop ideas in as you find them. Rate the ones you've cooked. Build the list when you're ready to shop.</p>
+    <div class="rules-line">Rules: no repeated protein across the 5 days · at least one meat-free night · week runs Sun–Thu</div>
+  </header>
+
+  <div class="backup-row">
+    <button class="btn btn-ghost btn-small" id="export-btn">Export backup (.json)</button>
+    <button class="btn btn-ghost btn-small" id="refresh-btn">Refresh from GitHub</button>
+  </div>
+  <div id="sync-status" class="sync-status">not connected — set up GitHub in Settings</div>
+
+  <nav class="tabs">
+    <button class="tab-btn active" data-tab="board">Board</button>
+    <button class="tab-btn" data-tab="week">Week</button>
+    <button class="tab-btn" data-tab="shop">Shopping</button>
+    <button class="tab-btn" data-tab="settings">Settings</button>
+  </nav>
+
+  <div id="loading" class="loading" style="display:none;">Loading the board…</div>
+
+  <!-- SETTINGS -->
+  <div class="panel" id="panel-settings">
+    <div class="settings-card">
+      <h2>Connect GitHub</h2>
+      <div class="sub">This board reads and writes a single JSON file in this repo — that's the shared, durable copy. Do this once per device/browser.</div>
+      <div class="steps">
+        <b>One-time setup (in GitHub, not here):</b><br>
+        1. GitHub → Settings → Developer settings → <a href="https://github.com/settings/personal-access-tokens/new" target="_blank">Fine-grained tokens</a> → New token.<br>
+        2. Scope it to only this repo, with <b>Contents: Read and write</b> permission, nothing else.<br>
+        3. Paste your details below. Each person uses their own token, generated from their own GitHub account (once added as a collaborator on the repo).
+      </div>
+      <div class="field">
+        <label for="s-owner">Repo owner</label>
+        <input type="text" id="s-owner" value="Rosskerr47">
+      </div>
+      <div class="field">
+        <label for="s-repo">Repo name</label>
+        <input type="text" id="s-repo" value="friendly-succotash">
+      </div>
+      <div class="field">
+        <label for="s-branch">Branch</label>
+        <input type="text" id="s-branch" value="main">
+      </div>
+      <div class="field">
+        <label for="s-path">File path</label>
+        <input type="text" id="s-path" value="meals.json">
+      </div>
+      <div class="field">
+        <label for="s-token">Fine-grained personal access token</label>
+        <input type="password" id="s-token" placeholder="github_pat_...">
+        <div class="field-hint">Stored only in this browser's local storage, on this device — never sent anywhere except directly to GitHub's API.</div>
+      </div>
+      <div class="checkbox-row">
+        <input type="checkbox" id="s-remember" checked>
+        <label for="s-remember">Remember on this device</label>
+      </div>
+      <button class="btn btn-primary" id="save-settings-btn">Save &amp; connect</button>
+      <div id="settings-status" class="field-hint" style="margin-top:10px;"></div>
+    </div>
+  </div>
+
+  <!-- BOARD -->
+  <div class="panel active" id="panel-board">
+    <div class="add-card">
+      <h2>Add an idea</h2>
+      <div class="field"><label for="f-title">Meal</label><input type="text" id="f-title" placeholder="e.g. Miso-glazed salmon"></div>
+      <div class="field"><label for="f-source">Where from</label><input type="text" id="f-source" placeholder="e.g. Insta reel, Ottolenghi Simple, Mum"></div>
+      <div class="field"><label for="f-notes">Notes</label><textarea id="f-notes" placeholder="Anything worth remembering — swaps, timing, who suggested it"></textarea></div>
+      <div class="field">
+        <label for="f-protein">Protein</label>
+        <input type="text" id="f-protein" placeholder="e.g. chicken thighs, tofu, none">
+      </div>
+      <div class="field">
+        <label for="f-ingredients">Ingredients (optional, one per line — add now or later)</label>
+        <textarea id="f-ingredients" placeholder="salmon fillets&#10;miso paste&#10;broccolini"></textarea>
+        <div class="field-hint">You can leave this empty and fill it in before shopping.</div>
+      </div>
+      <button class="btn btn-primary" id="add-btn">Add to board</button>
+    </div>
+    <div class="section-label">On the board</div>
+    <div id="active-list"></div>
+    <div class="section-label">Cooked &amp; rated</div>
+    <div id="cooked-list"></div>
+  </div>
+
+  <!-- WEEK -->
+  <div class="panel" id="panel-week">
+    <div class="section-label">This week, day by day</div>
+    <div id="week-list"></div>
+    <div class="field-hint" style="margin-top:14px;">Every meal on the board shows up as an option here — pick one per day. Selecting a day is what puts a meal "on this week."</div>
+  </div>
+
+  <!-- SHOPPING -->
+  <div class="panel" id="panel-shop">
+    <div class="section-label">Pick what you're making this week</div>
+    <div id="pick-list"></div>
+    <button class="btn btn-mustard" id="generate-btn" style="width:100%;margin-top:6px;">Generate shopping list</button>
+    <div class="receipt-wrap" id="receipt-wrap" style="display:none;">
+      <div class="receipt-edge"></div>
+      <div class="receipt" id="receipt-body"></div>
+      <div class="receipt-edge bottom"></div>
+      <div class="receipt-actions"><button class="btn btn-ghost btn-small" id="copy-btn" style="flex:1;">Copy list to paste into Woolworths</button></div>
+      <div class="copy-flash" id="copy-flash"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const CONFIG_KEY = 'meal-board-github-config';
+let ideas = [];
+let cfg = null;
+let currentSha = null;
+let lastSaveFailed = false;
+
+function uid(){ return 'id-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2,8); }
+function esc(s){ return (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function b64EncodeUnicode(str){ return btoa(unescape(encodeURIComponent(str))); }
+function b64DecodeUnicode(str){ return decodeURIComponent(escape(atob(str))); }
+
+function setSyncStatus(state, msg){
+  const el = document.getElementById('sync-status');
+  if(state === 'ok'){ el.className = 'sync-status ok'; el.textContent = 'synced with GitHub · ' + new Date().toLocaleTimeString(); }
+  else if(state === 'loading'){ el.className = 'sync-status'; el.textContent = 'syncing…'; }
+  else if(state === 'none'){ el.className = 'sync-status'; el.textContent = 'not connected — set up GitHub in Settings'; }
+  else { el.className = 'sync-status warn'; el.textContent = msg || 'GitHub sync failed — export a backup now.'; }
+}
+
+/* ---- settings / config (real browser localStorage — this is a normal webpage now) ---- */
+function loadConfig(){
+  try{
+    const raw = localStorage.getItem(CONFIG_KEY);
+    if(raw){
+      cfg = JSON.parse(raw);
+      document.getElementById('s-owner').value = cfg.owner || 'Rosskerr47';
+      document.getElementById('s-repo').value = cfg.repo || 'friendly-succotash';
+      document.getElementById('s-branch').value = cfg.branch || 'main';
+      document.getElementById('s-path').value = cfg.path || 'meals.json';
+      document.getElementById('s-token').value = cfg.token || '';
+      return true;
+    }
+  }catch(e){ /* localStorage unavailable (private browsing etc) — just prompt for it each time */ }
+  return false;
+}
+
+document.getElementById('save-settings-btn').onclick = async () => {
+  const owner = document.getElementById('s-owner').value.trim();
+  const repo = document.getElementById('s-repo').value.trim();
+  const branch = document.getElementById('s-branch').value.trim() || 'main';
+  const path = document.getElementById('s-path').value.trim() || 'meals.json';
+  const token = document.getElementById('s-token').value.trim();
+  const remember = document.getElementById('s-remember').checked;
+  const statusEl = document.getElementById('settings-status');
+  if(!owner || !repo || !token){ statusEl.textContent = 'Owner, repo, and token are all required.'; return; }
+  cfg = { owner, repo, branch, path, token };
+  statusEl.textContent = 'Connecting…';
+  if(remember){
+    try{ localStorage.setItem(CONFIG_KEY, JSON.stringify(cfg)); }
+    catch(e){ /* not fatal, just means re-entering next time */ }
+  }
+  const ok = await loadFromGitHub();
+  statusEl.textContent = ok ? 'Connected — switch to the Board tab.' : 'Could not connect — check the details above and the token\'s repo/permission scope.';
+};
+
+/* ---- GitHub storage ---- */
+async function ghGet(){
+  const url = `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${encodeURIComponent(cfg.path)}?ref=${encodeURIComponent(cfg.branch)}`;
+  const res = await fetch(url, { headers: { 'Authorization': `Bearer ${cfg.token}`, 'Accept': 'application/vnd.github+json' } });
+  if(res.status === 404){ currentSha = null; return []; }
+  if(!res.ok) throw new Error('GitHub read failed: ' + res.status);
+  const data = await res.json();
+  currentSha = data.sha;
+  if(!data.content) return [];
+  const text = b64DecodeUnicode(data.content.replace(/\n/g, ''));
+  return text.trim() ? JSON.parse(text) : [];
+}
+
+async function ghPut(message){
+  const url = `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${encodeURIComponent(cfg.path)}`;
+  const body = { message: message || 'Update meal board', content: b64EncodeUnicode(JSON.stringify(ideas, null, 2)), branch: cfg.branch };
+  if(currentSha) body.sha = currentSha;
+  const res = await fetch(url, {
+    method: 'PUT',
+    headers: { 'Authorization': `Bearer ${cfg.token}`, 'Accept': 'application/vnd.github+json', 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  });
+  if(res.status === 409){ await ghGet(); return ghPut(message); }
+  if(!res.ok) throw new Error('GitHub write failed: ' + res.status);
+  const data = await res.json();
+  currentSha = data.content.sha;
+  return true;
+}
+
+async function loadFromGitHub(){
+  if(!cfg) return false;
+  document.getElementById('loading').style.display = 'block';
+  setSyncStatus('loading');
+  try{
+    ideas = await ghGet();
+    setSyncStatus('ok');
+    document.getElementById('loading').style.display = 'none';
+    renderAll();
+    return true;
+  }catch(e){
+    console.error(e);
+    setSyncStatus('fail', 'Could not load from GitHub — check Settings.');
+    document.getElementById('loading').style.display = 'none';
+    return false;
+  }
+}
+
+async function saveIdeas(message){
+  renderAll();
+  if(!cfg){ setSyncStatus('none'); return; }
+  try{
+    await ghPut(message);
+    lastSaveFailed = false;
+    setSyncStatus('ok');
+  }catch(e){
+    console.error(e);
+    lastSaveFailed = true;
+    setSyncStatus('fail', 'GitHub save failed — export a backup now and check your token/repo access.');
+  }
+}
+
+window.addEventListener('beforeunload', (e) => {
+  if(lastSaveFailed){
+    e.preventDefault();
+    e.returnValue = 'A recent change failed to save to GitHub — export a backup before leaving.';
+    return e.returnValue;
+  }
+});
+
+document.getElementById('refresh-btn').onclick = () => loadFromGitHub();
+
+function exportBackup(){
+  const payload = { version: 1, exportedAt: new Date().toISOString(), ideas };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = `meal-board-backup-${new Date().toISOString().slice(0,10)}.json`;
+  document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+}
+document.getElementById('export-btn').onclick = exportBackup;
+
+/* ---- tabs ---- */
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+  };
+});
+
+/* ---- render ---- */
+function renderAll(){ renderBoard(); renderWeek(); renderPickList(); }
+
+function renderBoard(){
+  const active = ideas.filter(i => i.status !== 'cooked');
+  const cooked = ideas.filter(i => i.status === 'cooked').sort((a,b)=> (b.rating||0)-(a.rating||0));
+
+  const activeEl = document.getElementById('active-list');
+  activeEl.innerHTML = active.length ? '' : '<div class="empty">Nothing on the board yet — add the first idea above.</div>';
+  active.forEach(idea => {
+    const card = document.createElement('div');
+    card.className = 'idea';
+    const isPlanned = idea.status === 'planned';
+    const ingCount = (idea.ingredients||[]).length;
+    card.innerHTML = `
+      <div class="idea-top">
+        <div>
+          <div class="idea-title">${esc(idea.title)}</div>
+          ${idea.source ? `<div class="idea-source">${esc(idea.source)}</div>` : ''}
+          ${idea.protein ? `<div class="idea-source">Protein: ${esc(idea.protein)}</div>` : ''}
+        </div>
+        <div class="badge ${isPlanned ? 'badge-planned' : 'badge-idea'}">${isPlanned ? ('This week' + (idea.day ? ' · ' + idea.day : '')) : 'Idea'}</div>
+      </div>
+      ${idea.notes ? `<div class="idea-notes">${esc(idea.notes)}</div>` : ''}
+      ${ingCount ? `<div class="idea-ingredients">${ingCount} ingredient${ingCount>1?'s':''} logged</div>` : `<div class="idea-ingredients">No ingredients yet</div>`}
+      <div class="idea-actions">
+        ${!isPlanned ? `<button class="btn btn-ghost btn-small" data-action="plan" data-id="${idea.id}">Add to this week</button>` : `<button class="btn btn-ghost btn-small" data-action="unplan" data-id="${idea.id}">Move back to ideas</button>`}
+        ${isPlanned ? `<select class="day-select-inline" data-id="${idea.id}">
+            <option value="">Day…</option>
+            ${DAY_NAMES.map(d => `<option value="${d}" ${idea.day===d?'selected':''}>${d}</option>`).join('')}
+          </select>` : ''}
+        <button class="btn btn-ghost btn-small" data-action="edit-ing" data-id="${idea.id}">Edit ingredients</button>
+        <button class="btn btn-mustard btn-small" data-action="cook" data-id="${idea.id}">Mark cooked</button>
+        <button class="btn btn-ghost btn-small" data-action="delete" data-id="${idea.id}">Remove</button>
+      </div>
+      <div class="cook-form" id="cookform-${idea.id}" style="display:none;">
+        <div class="stars" id="stars-${idea.id}">${[1,2,3,4,5].map(n=>`<span class="star" data-val="${n}" data-id="${idea.id}">★</span>`).join('')}</div>
+        <textarea placeholder="How'd it go? Worth repeating? Any tweaks for next time." id="feedback-${idea.id}"></textarea>
+        <button class="btn btn-primary btn-small" style="width:auto;margin-top:8px;" data-action="save-cook" data-id="${idea.id}">Save &amp; move to history</button>
+      </div>
+      <div class="ing-edit" id="ingedit-${idea.id}" style="display:none;margin-top:10px;">
+        <textarea id="ingtext-${idea.id}" placeholder="one ingredient per line">${(idea.ingredients||[]).join('\n')}</textarea>
+        <button class="btn btn-primary btn-small" style="width:auto;margin-top:8px;" data-action="save-ing" data-id="${idea.id}">Save ingredients</button>
+      </div>
+    `;
+    activeEl.appendChild(card);
+  });
+
+  const cookedEl = document.getElementById('cooked-list');
+  cookedEl.innerHTML = cooked.length ? '' : '<div class="empty">Once you cook and rate something, it lands here.</div>';
+  cooked.forEach(idea => {
+    const card = document.createElement('div');
+    card.className = 'cooked-card';
+    const stars = '★'.repeat(idea.rating||0) + '☆'.repeat(5-(idea.rating||0));
+    card.innerHTML = `
+      <div class="cooked-top"><div class="cooked-title">${esc(idea.title)}</div><div class="cooked-stars">${stars}</div></div>
+      ${idea.feedback ? `<div class="cooked-feedback">"${esc(idea.feedback)}"</div>` : ''}
+      <div class="cooked-meta">${esc(idea.source||'')}${idea.source ? ' · ' : ''}cooked ${idea.cookedDate ? new Date(idea.cookedDate).toLocaleDateString() : ''}</div>
+    `;
+    cookedEl.appendChild(card);
+  });
+
+  attachBoardHandlers();
+}
+
+function attachBoardHandlers(){
+  document.querySelectorAll('[data-action="plan"]').forEach(b => b.onclick = () => setStatus(b.dataset.id, 'planned'));
+  document.querySelectorAll('[data-action="unplan"]').forEach(b => b.onclick = () => setStatus(b.dataset.id, 'idea'));
+  document.querySelectorAll('[data-action="delete"]').forEach(b => b.onclick = () => deleteIdea(b.dataset.id));
+  document.querySelectorAll('[data-action="cook"]').forEach(b => b.onclick = () => {
+    const el = document.getElementById('cookform-' + b.dataset.id);
+    el.style.display = el.style.display === 'none' ? 'block' : 'none';
+  });
+  document.querySelectorAll('[data-action="edit-ing"]').forEach(b => b.onclick = () => {
+    const el = document.getElementById('ingedit-' + b.dataset.id);
+    el.style.display = el.style.display === 'none' ? 'block' : 'none';
+  });
+  document.querySelectorAll('[data-action="save-ing"]').forEach(b => b.onclick = () => saveIngredients(b.dataset.id));
+  document.querySelectorAll('.star').forEach(s => s.onclick = () => selectStar(s.dataset.id, parseInt(s.dataset.val)));
+  document.querySelectorAll('[data-action="save-cook"]').forEach(b => b.onclick = () => saveCooked(b.dataset.id));
+  document.querySelectorAll('.day-select-inline').forEach(sel => sel.onchange = () => assignDay(sel.dataset.id, sel.value));
+}
+
+function selectStar(id, val){
+  const wrap = document.getElementById('stars-' + id);
+  wrap.dataset.selected = val;
+  wrap.querySelectorAll('.star').forEach(s => s.classList.toggle('on', parseInt(s.dataset.val) <= val));
+}
+
+async function setStatus(id, status){
+  const idea = ideas.find(i => i.id === id);
+  if(idea){ idea.status = status; if(status === 'idea') idea.day = null; await saveIdeas(`Update ${idea.title}`); }
+}
+async function deleteIdea(id){
+  const idea = ideas.find(i => i.id === id);
+  ideas = ideas.filter(i => i.id !== id);
+  await saveIdeas(`Remove ${idea ? idea.title : id}`);
+}
+async function saveIngredients(id){
+  const idea = ideas.find(i => i.id === id);
+  const text = document.getElementById('ingtext-' + id).value;
+  idea.ingredients = text.split('\n').map(s=>s.trim()).filter(Boolean);
+  await saveIdeas(`Update ingredients for ${idea.title}`);
+}
+async function saveCooked(id){
+  const idea = ideas.find(i => i.id === id);
+  const starsWrap = document.getElementById('stars-' + id);
+  const rating = parseInt(starsWrap.dataset.selected || '0');
+  const feedback = document.getElementById('feedback-' + id).value.trim();
+  idea.status = 'cooked'; idea.rating = rating; idea.feedback = feedback; idea.cookedDate = new Date().toISOString();
+  await saveIdeas(`Mark ${idea.title} as cooked`);
+}
+
+document.getElementById('add-btn').onclick = async () => {
+  const title = document.getElementById('f-title').value.trim();
+  if(!title) return;
+  const source = document.getElementById('f-source').value.trim();
+  const notes = document.getElementById('f-notes').value.trim();
+  const protein = document.getElementById('f-protein').value.trim();
+  const ingredients = document.getElementById('f-ingredients').value.split('\n').map(s=>s.trim()).filter(Boolean);
+  ideas.unshift({ id: uid(), title, source, notes, protein, ingredients, status: 'idea', addedDate: new Date().toISOString() });
+  document.getElementById('f-title').value = '';
+  document.getElementById('f-source').value = '';
+  document.getElementById('f-notes').value = '';
+  document.getElementById('f-protein').value = '';
+  document.getElementById('f-ingredients').value = '';
+  await saveIdeas(`Add ${title}`);
+};
+
+/* ---- week view ---- */
+const DAY_NAMES = ['Sun','Mon','Tue','Wed','Thu'];
+
+function currentWeekDates(){
+  const now = new Date();
+  const dow = now.getDay();
+  let offset;
+  if(dow === 5) offset = 2; else if(dow === 6) offset = 1; else offset = -dow;
+  const sunday = new Date(now); sunday.setDate(now.getDate() + offset);
+  return DAY_NAMES.map((name, i) => { const d = new Date(sunday); d.setDate(sunday.getDate() + i); return { name, date: d }; });
+}
+
+function renderWeek(){
+  const wrap = document.getElementById('week-list');
+  const candidates = ideas.filter(i => i.status !== 'cooked');
+  const todayStr = new Date().toDateString();
+  wrap.innerHTML = '';
+  currentWeekDates().forEach(({name, date}) => {
+    const assigned = candidates.find(i => i.day === name);
+    const card = document.createElement('div');
+    card.className = 'day-card' + (date.toDateString() === todayStr ? ' today' : '');
+    const options = [`<option value="">— open —</option>`].concat(candidates.map(i => `<option value="${i.id}" ${assigned && assigned.id === i.id ? 'selected' : ''}>${esc(i.title)}</option>`));
+    card.innerHTML = `
+      <div class="day-label"><div class="day-name">${name}</div><div class="day-date">${date.toLocaleDateString('en-AU', {day:'numeric', month:'short'})}</div></div>
+      <select class="day-select" data-day="${name}">${options.join('')}</select>
+    `;
+    wrap.appendChild(card);
+  });
+  wrap.querySelectorAll('.day-select').forEach(sel => sel.onchange = () => setDay(sel.dataset.day, sel.value));
+  if(!candidates.length){
+    wrap.insertAdjacentHTML('beforeend', '<div class="empty">No meals on the board yet — add some on the Board tab first.</div>');
+  }
+}
+
+async function setDay(day, ideaId){
+  ideas.forEach(i => { if(i.day === day) i.day = null; });
+  if(ideaId){ const idea = ideas.find(i => i.id === ideaId); if(idea){ idea.day = day; idea.status = 'planned'; } }
+  await saveIdeas(`Assign ${day}`);
+}
+async function assignDay(ideaId, day){
+  if(day) ideas.forEach(i => { if(i.day === day) i.day = null; });
+  const idea = ideas.find(i => i.id === ideaId);
+  if(idea) idea.day = day || null;
+  await saveIdeas(`Assign day for ${idea ? idea.title : ideaId}`);
+}
+
+/* ---- shopping list ---- */
+let pickedIds = new Set();
+
+function renderPickList(){
+  const wrap = document.getElementById('pick-list');
+  const candidates = ideas.filter(i => i.status !== 'cooked');
+  if(!candidates.length){ wrap.innerHTML = '<div class="empty">Add some ideas on the Board tab first.</div>'; return; }
+  candidates.forEach(i => { if(i.status === 'planned') pickedIds.add(i.id); });
+  wrap.innerHTML = '';
+  candidates.forEach(idea => {
+    const row = document.createElement('label');
+    row.className = 'pick-row';
+    const ingCount = (idea.ingredients||[]).length;
+    row.innerHTML = `
+      <input type="checkbox" data-id="${idea.id}" ${pickedIds.has(idea.id) ? 'checked' : ''}>
+      <div>
+        <div class="pt">${esc(idea.title)}</div>
+        ${idea.source ? `<div class="ps">${esc(idea.source)}</div>` : ''}
+        <div class="pn">${ingCount ? ingCount + ' ingredients' : 'No ingredients logged — add them on the Board tab'}</div>
+      </div>
+    `;
+    row.querySelector('input').onchange = (e) => { if(e.target.checked) pickedIds.add(idea.id); else pickedIds.delete(idea.id); };
+    wrap.appendChild(row);
+  });
+}
+
+document.getElementById('generate-btn').onclick = () => {
+  const chosen = ideas.filter(i => pickedIds.has(i.id) && (i.ingredients||[]).length);
+  const wrapEl = document.getElementById('receipt-wrap');
+  const body = document.getElementById('receipt-body');
+  if(!chosen.length){
+    wrapEl.style.display = 'block';
+    body.innerHTML = `<h3>No ingredients to list</h3><div class="rdate">Pick recipes that have ingredients logged</div>`;
+    document.getElementById('copy-flash').textContent = '';
+    wrapEl.scrollIntoView({behavior:'smooth', block:'start'});
+    return;
+  }
+  let html = `<h3>Shopping List</h3><div class="rdate">${new Date().toLocaleDateString('en-AU', {weekday:'long', day:'numeric', month:'long'})}</div>`;
+  let plain = `SHOPPING LIST — ${new Date().toLocaleDateString('en-AU')}\n`;
+  chosen.forEach(idea => {
+    html += `<div class="rgroup-title">${esc(idea.title)}</div><ul>`;
+    plain += `\n${idea.title.toUpperCase()}\n`;
+    idea.ingredients.forEach(ing => { html += `<li>${esc(ing)}</li>`; plain += `- ${ing}\n`; });
+    html += `</ul>`;
+  });
+  const totalItems = chosen.reduce((n,i)=>n+i.ingredients.length,0);
+  html += `<div class="rtotal">${chosen.length} meal${chosen.length>1?'s':''} · ${totalItems} items</div>`;
+  body.innerHTML = html;
+  wrapEl.style.display = 'block';
+  wrapEl.dataset.plain = plain;
+  document.getElementById('copy-flash').textContent = '';
+  wrapEl.scrollIntoView({behavior:'smooth', block:'start'});
+};
+
+document.getElementById('copy-btn').onclick = async () => {
+  const plain = document.getElementById('receipt-wrap').dataset.plain || '';
+  const flash = document.getElementById('copy-flash');
+  try{ await navigator.clipboard.writeText(plain); flash.textContent = 'Copied — paste it into a new Woolworths list'; }
+  catch(e){ flash.textContent = 'Could not copy automatically — select the text above manually'; }
+};
+
+/* ---- boot ---- */
+(async () => {
+  const hasConfig = loadConfig();
+  if(hasConfig){
+    await loadFromGitHub();
+  } else {
+    setSyncStatus('none');
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelector('[data-tab="settings"]').classList.add('active');
+    document.getElementById('panel-settings').classList.add('active');
+  }
+})();
+</script>
+</body>
+</html>
