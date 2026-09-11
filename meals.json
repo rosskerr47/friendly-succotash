@@ -231,7 +231,7 @@
     "title": "Crispy Salt & Pepper Tofu",
     "source": "Cookbook, p.110 (Stir-fries & Noodles)",
     "notes": "Serves 3 as a main with rice. Prep 10 min + 30 min tofu pressing. Cook 10 min. Pan-fried, not deep-fried. Serve with rice or steamed Asian greens.",
-    "protein": "tofu",
+    "protein": "veggie",
     "carbBase": "rice (side, not included in this recipe)",
     "ingredients": [
       "500 g firm or hard tofu",
@@ -320,7 +320,7 @@
     "title": "Cauliflower Mac & Cheese",
     "source": "Cookbook, p.136 (Everyone loves pasta)",
     "notes": "Serves 6. Prep 25 min, cook 1 hour. Vegetable stock used, no meat. Tip: chop cauliflower very finely if kids might spot it.",
-    "protein": "none",
+    "protein": "veggie",
     "carbBase": "macaroni",
     "ingredients": [
       "1 tablespoon extra-virgin olive oil",
@@ -395,7 +395,7 @@
     "id": "fish-and-vegetables",
     "title": "Fish & Vegetables",
     "source": "",
-    "notes": "Generic go-to, not a specific recipe — whatever fish and veg are on hand/fresh that week.",
+    "notes": "Generic go-to, not a specific recipe \u2014 whatever fish and veg are on hand/fresh that week.",
     "protein": "fish",
     "carbBase": "none (vegetables, not a starchy carb)",
     "ingredients": [
