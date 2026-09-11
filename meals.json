@@ -9,9 +9,9 @@
       "Butterfly chicken",
       "Vegetables"
     ],
-    "status": "planned",
+    "status": "idea",
     "addedDate": "2026-09-11T22:05:31.004Z",
-    "day": "Sun",
+    "day": null,
     "makeAhead": false
   },
   {
@@ -160,8 +160,8 @@
       "2 x 125 g fresh buffalo mozzarella balls, cut into thick slices",
       "basil leaves, to serve (optional)"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Sun",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -234,8 +234,8 @@
       "1/4 tsp ground fennel seeds",
       "1/4 tsp caster sugar"
     ],
-    "status": "planned",
-    "day": "Thu",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -295,8 +295,8 @@
       "50 g (1/2 cup) freshly grated parmesan",
       "225 g (1 1/2 cups) freshly grated mozzarella"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Thu",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -332,8 +332,8 @@
       "1 tablespoon extra-virgin olive oil",
       "2 tablespoons unsalted butter, chopped and softened"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Wed",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -371,8 +371,8 @@
       "4 radishes, very finely sliced into rounds",
       "5 spring onions, very finely sliced"
     ],
-    "status": "planned",
-    "day": "Tue",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -391,7 +391,7 @@
       "Vegetables"
     ],
     "status": "planned",
-    "day": "Wed",
+    "day": "Tue",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
