@@ -373,7 +373,11 @@
     "notes": "Generic go-to, not a specific recipe — whatever fish and veg are on hand/fresh that week.",
     "protein": "fish",
     "carbBase": "none (vegetables, not a starchy carb)",
-    "ingredients": [],
+    "ingredients": [
+      "Salmon/Basa",
+      "Packet rice",
+      "Vegetables"
+    ],
     "status": "planned",
     "day": "Wed",
     "rating": null,
