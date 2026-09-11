@@ -313,5 +313,43 @@
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08"
+  },
+  {
+    "id": "japanese-crumbed-pork-tonkatsu-slaw",
+    "title": "Japanese Crumbed Pork with Tonkatsu Sauce & Slaw",
+    "source": "Cookbook, p.168 (Fast & fresh)",
+    "notes": "Serves 4. Prep 25 min, cook 10 min. Served with slaw, no rice/pasta in the recipe as written.",
+    "protein": "pork cutlets",
+    "carbBase": "none specified (breadcrumb-crusted, served with slaw)",
+    "ingredients": [
+      "4 x 175 g boneless pork cutlets (or loin fillets)",
+      "salt flakes",
+      "110 g (3/4 cup) plain flour",
+      "2 eggs, whisked",
+      "150 g (2 1/2 cups) panko breadcrumbs",
+      "3 tablespoons sesame seeds",
+      "vegetable oil, for frying",
+      "-- Tonkatsu sauce --",
+      "3 tablespoons tomato sauce",
+      "2 1/2 tablespoons worcestershire sauce",
+      "1 tablespoon soy sauce or oyster sauce",
+      "2 teaspoons brown sugar or caster sugar",
+      "-- Japanese dressing --",
+      "2 tablespoons Japanese kewpie mayonnaise",
+      "2 teaspoons wasabi paste",
+      "1 tablespoon pickled ginger, finely sliced",
+      "1 tablespoon pickled ginger juice",
+      "1 tablespoon rice wine vinegar",
+      "-- Slaw --",
+      "1/2 small savoy cabbage (approx. 500 g), core removed, very finely shredded",
+      "1 Lebanese cucumber, very finely sliced into rounds",
+      "4 radishes, very finely sliced into rounds",
+      "5 spring onions, very finely sliced"
+    ],
+    "status": "idea",
+    "day": null,
+    "rating": null,
+    "feedback": "",
+    "addedDate": "2026-09-08"
   }
 ]
