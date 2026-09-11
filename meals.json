@@ -428,5 +428,41 @@
     "feedback": "",
     "addedDate": "2026-09-12",
     "makeAhead": true
+  },
+  {
+    "id": "one-pot-paprika-chicken-rice",
+    "title": "One-Pot Paprika Chicken & Rice",
+    "source": "Cookbook, p.115 (One-pan)",
+    "notes": "Serves 4. Prep 5 min, cook 15 min + 10 min resting. Chicken can be marinated up to 3 days ahead. Leftovers keep 3 days, reheat in microwave, not suitable to freeze.",
+    "protein": "chicken thigh (bone-in, skin-on)",
+    "carbBase": "white rice (jasmine or basmati)",
+    "ingredients": [
+      "1.2 kg bone-in, skin-on chicken thigh cutlets (5-6 cutlets)",
+      "2 tablespoons extra-virgin olive oil",
+      "1 tablespoon dried herbs (oregano, thyme or Italian herb mix)",
+      "1 tablespoon sweet paprika",
+      "1/2 teaspoon smoked paprika",
+      "1 teaspoon onion powder",
+      "1/2 teaspoon freshly ground black pepper",
+      "1/2 teaspoon sea salt flakes",
+      "1 onion, finely diced",
+      "4 garlic cloves, finely chopped",
+      "2 tablespoons tomato paste",
+      "300 g (1 1/2 cups) white rice (jasmine or basmati)",
+      "750 ml (3 cups) chicken stock",
+      "coriander or flat-leaf parsley leaves, roughly chopped, to serve (optional)",
+      "-- Cucumber salad --",
+      "3 Lebanese cucumbers, finely diced",
+      "juice of 1/2 lemon",
+      "1/2 teaspoon sea salt flakes",
+      "1/2 teaspoon freshly ground black pepper",
+      "3 tablespoons sour cream"
+    ],
+    "status": "idea",
+    "day": null,
+    "rating": null,
+    "feedback": "",
+    "addedDate": "2026-09-12",
+    "makeAhead": true
   }
 ]
