@@ -655,5 +655,38 @@
     "feedback": "",
     "addedDate": "2026-09-12",
     "makeAhead": false
+  },
+  {
+    "id": "one-pot-sausage-meatball-pasta",
+    "title": "One-Pot Sausage Meatball Pasta",
+    "source": "Cookbook, p.74 (Effortless)",
+    "notes": "Serves 4-5. Prep 15 min, cook 35 min. Sausages cut into pieces as a meatball shortcut - use good-quality thin sausages (90%+ meat). Leftovers fridge 4 days, freezer 3 months, fully thaw then microwave to reheat.",
+    "protein": "beef or pork sausage",
+    "carbBase": "rigatoni",
+    "ingredients": [
+      "1 1/2 tbsp extra-virgin olive oil",
+      "500 g good-quality thin beef or pork sausages, cut into 1.5 cm pieces",
+      "1 brown onion, finely chopped",
+      "2 garlic cloves, minced",
+      "1 carrot, peeled and finely diced",
+      "1 celery stalk, finely diced",
+      "1 bay leaf",
+      "1 tsp dried rosemary",
+      "3 tbsp (60 g) tomato paste",
+      "800 g can crushed tomatoes",
+      "2 cups (500 ml) low-salt chicken stock",
+      "1 1/2 cups (375 ml) water",
+      "3/4 tsp cooking salt",
+      "1/2 tsp black pepper",
+      "300 g rigatoni (or penne, ziti or macaroni)",
+      "1 1/2 cups (150 g) shredded colby cheese (or any melting cheese)",
+      "1 tsp finely chopped parsley, to serve (optional)"
+    ],
+    "status": "idea",
+    "day": null,
+    "rating": null,
+    "feedback": "",
+    "addedDate": "2026-09-12",
+    "makeAhead": true
   }
 ]
