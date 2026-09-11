@@ -191,5 +191,32 @@
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08"
+  },
+  {
+    "id": "crispy-salt-pepper-tofu",
+    "title": "Crispy Salt & Pepper Tofu",
+    "source": "Cookbook, p.110 (Stir-fries & Noodles)",
+    "notes": "Serves 3 as a main with rice. Prep 10 min + 30 min tofu pressing. Cook 10 min. Pan-fried, not deep-fried. Serve with rice or steamed Asian greens.",
+    "protein": "tofu (meat-free)",
+    "carbBase": "rice (side, not included in this recipe)",
+    "ingredients": [
+      "500 g firm or hard tofu",
+      "2 1/2 tbsp cornflour, plus more if needed",
+      "3 tbsp (45 ml) canola oil",
+      "2 large garlic cloves, finely minced",
+      "1 green onion stem, white and green parts separated, finely minced",
+      "1 each long red and green chilli, deseeded and finely minced",
+      "-- Secret salt and pepper spice mix --",
+      "1 tsp table salt (not cooking salt)",
+      "1/2 tsp finely ground white pepper",
+      "1/2 tsp Chinese five spice",
+      "1/4 tsp ground fennel seeds",
+      "1/4 tsp caster sugar"
+    ],
+    "status": "idea",
+    "day": null,
+    "rating": null,
+    "feedback": "",
+    "addedDate": "2026-09-08"
   }
 ]
