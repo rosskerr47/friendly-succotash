@@ -9,9 +9,9 @@
       "Butterfly chicken",
       "Vegetables"
     ],
-    "status": "idea",
+    "status": "planned",
     "addedDate": "2026-09-11T22:05:31.004Z",
-    "day": null,
+    "day": "Wed",
     "makeAhead": false
   },
   {
@@ -42,8 +42,8 @@
       "2 x 20cm frozen butter puff pastry sheets (or 1 large sheet)",
       "1 egg"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Mon",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -128,8 +128,8 @@
       "80 ml (1/3 cup) fish sauce",
       "3 tablespoons honey"
     ],
-    "status": "planned",
-    "day": "Wed",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -235,7 +235,7 @@
       "1/4 tsp caster sugar"
     ],
     "status": "planned",
-    "day": "Mon",
+    "day": "Thu",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -390,8 +390,8 @@
       "Packet rice",
       "Vegetables"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Sun",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -536,8 +536,8 @@
       "1 tablespoon brown sugar",
       "1 tablespoon sesame oil"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Tue",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -581,8 +581,8 @@
       "30 g unsalted butter, melted",
       "chopped parsley, to serve (optional)"
     ],
-    "status": "planned",
-    "day": "Tue",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -649,8 +649,8 @@
       "2 tsp finely minced ginger (optional)",
       "200 g pork mince"
     ],
-    "status": "planned",
-    "day": "Sun",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -682,8 +682,8 @@
       "1 1/2 cups (150 g) shredded colby cheese (or any melting cheese)",
       "1 tsp finely chopped parsley, to serve (optional)"
     ],
-    "status": "planned",
-    "day": "Thu",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
