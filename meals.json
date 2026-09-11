@@ -11,7 +11,7 @@
     ],
     "status": "planned",
     "addedDate": "2026-09-11T22:05:31.004Z",
-    "day": "Sun",
+    "day": "Wed",
     "makeAhead": false
   },
   {
@@ -58,7 +58,7 @@
     "carbBase": "spaghetti",
     "ingredients": [],
     "status": "planned",
-    "day": "Wed",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
