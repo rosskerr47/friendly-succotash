@@ -688,5 +688,37 @@
     "feedback": "",
     "addedDate": "2026-09-12",
     "makeAhead": true
+  },
+  {
+    "id": "vietnamese-shaking-beef",
+    "title": "Vietnamese Shaking Beef (Bo Luc Lac)",
+    "source": "Cookbook, p.100 (Stir-fries & Noodles)",
+    "notes": "Serves 2 only - scale up for the household. Prep 5 min + 24-48 hours marinating, cook 3 min. Rump steak (or scotch fillet/porterhouse/sirloin) tenderised with bicarb. Best made fresh, not suitable for freezing. Recipe suggests serving with Fluffy Coconut Rice and smashed cucumber (sides not included here).",
+    "protein": "beef rump steak",
+    "carbBase": "none specified (suggested side: coconut rice)",
+    "ingredients": [
+      "300 g beef rump steak, cut into 2.5 cm cubes",
+      "2 tbsp canola oil",
+      "1 lime, cut into cheeks or wedges, to serve (optional)",
+      "-- Beef marinade --",
+      "4 tsp oyster sauce",
+      "2 tsp caster sugar",
+      "2 tsp fish sauce",
+      "1 tsp finely grated garlic",
+      "2 tsp kecap manis",
+      "1/2 tsp freshly ground black pepper",
+      "1/2 tsp bicarbonate of soda",
+      "1 tsp canola oil",
+      "-- Lime pepper dipping sauce --",
+      "1 1/2 tsp lime juice",
+      "1 tsp freshly ground black pepper",
+      "1/8 tsp fish sauce"
+    ],
+    "status": "idea",
+    "day": null,
+    "rating": null,
+    "feedback": "",
+    "addedDate": "2026-09-12",
+    "makeAhead": false
   }
 ]
