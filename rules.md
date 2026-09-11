@@ -6,6 +6,8 @@ by either Ross or his wife, from any conversation with Claude.
 ## Variety rules
 - **No repeated protein** across the 5 days (e.g. don't pick beef mince twice).
 - **At least one meat-free night** in the 5.
+- **At least 2 make-ahead meals** in the 5 — meals marked `makeAhead: true`, meaning they
+  can be fully or mostly cooked on the weekend and reheated later in the week.
 
 ## Week structure
 - The week runs **Sunday through Thursday** (5 days) — the big grocery shop happens
@@ -18,6 +20,8 @@ by either Ross or his wife, from any conversation with Claude.
 - `protein`, `carbBase` — used to apply the variety rules above
 - `ingredients` — full list, used to build a shopping list
 - `status` (`idea` / `planned` / `cooked`), `day` (Sun/Mon/Tue/Wed/Thu or null)
+- `makeAhead` (true/false) — set by whoever adds/reviews the recipe, based on whether
+  it holds up being cooked ahead and reheated
 - `rating` (1-5) and `feedback` — filled in once a meal's been cooked, to inform
   future picks (e.g. favour highly-rated meals, retire poorly-rated ones)
 

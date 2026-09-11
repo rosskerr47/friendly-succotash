@@ -124,7 +124,7 @@
     <div class="eyebrow">Household · Meal Planning</div>
     <h1>The Weekly Board</h1>
     <p>Drop ideas in as you find them. Rate the ones you've cooked. Build the list when you're ready to shop.</p>
-    <div class="rules-line">Rules: no repeated protein across the 5 days · at least one meat-free night · week runs Sun–Thu</div>
+    <div class="rules-line">Rules: no repeated protein · at least one meat-free night · at least 2 make-ahead meals · week runs Sun–Thu</div>
   </header>
 
   <div class="backup-row">
@@ -198,6 +198,10 @@
         <label for="f-ingredients">Ingredients (optional, one per line — add now or later)</label>
         <textarea id="f-ingredients" placeholder="salmon fillets&#10;miso paste&#10;broccolini"></textarea>
         <div class="field-hint">You can leave this empty and fill it in before shopping.</div>
+      </div>
+      <div class="checkbox-row" style="margin:2px 0 14px;">
+        <input type="checkbox" id="f-makeahead">
+        <label for="f-makeahead">Good to make ahead (cook Sunday, reheat later in the week)</label>
       </div>
       <button class="btn btn-primary" id="add-btn">Add to board</button>
     </div>
@@ -399,6 +403,7 @@ function renderBoard(){
         </div>
         <div class="badge ${isPlanned ? 'badge-planned' : 'badge-idea'}">${isPlanned ? ('This week' + (idea.day ? ' · ' + idea.day : '')) : 'Idea'}</div>
       </div>
+      ${idea.makeAhead ? `<div class="idea-source" style="color:var(--mustard-deep);">✓ Good to make ahead</div>` : ''}
       ${idea.notes ? `<div class="idea-notes">${esc(idea.notes)}</div>` : ''}
       ${ingCount ? `<div class="idea-ingredients">${ingCount} ingredient${ingCount>1?'s':''} logged</div>` : `<div class="idea-ingredients">No ingredients yet</div>`}
       <div class="idea-actions">
@@ -408,6 +413,7 @@ function renderBoard(){
             ${DAY_NAMES.map(d => `<option value="${d}" ${idea.day===d?'selected':''}>${d}</option>`).join('')}
           </select>` : ''}
         <button class="btn btn-ghost btn-small" data-action="edit-ing" data-id="${idea.id}">Edit ingredients</button>
+        <button class="btn btn-ghost btn-small" data-action="toggle-makeahead" data-id="${idea.id}">${idea.makeAhead ? '✓ Make ahead' : 'Mark make-ahead'}</button>
         <button class="btn btn-mustard btn-small" data-action="cook" data-id="${idea.id}">Mark cooked</button>
         <button class="btn btn-ghost btn-small" data-action="delete" data-id="${idea.id}">Remove</button>
       </div>
@@ -456,6 +462,7 @@ function attachBoardHandlers(){
   document.querySelectorAll('[data-action="save-ing"]').forEach(b => b.onclick = () => saveIngredients(b.dataset.id));
   document.querySelectorAll('.star').forEach(s => s.onclick = () => selectStar(s.dataset.id, parseInt(s.dataset.val)));
   document.querySelectorAll('[data-action="save-cook"]').forEach(b => b.onclick = () => saveCooked(b.dataset.id));
+  document.querySelectorAll('[data-action="toggle-makeahead"]').forEach(b => b.onclick = () => toggleMakeAhead(b.dataset.id));
   document.querySelectorAll('.day-select-inline').forEach(sel => sel.onchange = () => assignDay(sel.dataset.id, sel.value));
 }
 
@@ -480,6 +487,11 @@ async function saveIngredients(id){
   idea.ingredients = text.split('\n').map(s=>s.trim()).filter(Boolean);
   await saveIdeas(`Update ingredients for ${idea.title}`);
 }
+async function toggleMakeAhead(id){
+  const idea = ideas.find(i => i.id === id);
+  idea.makeAhead = !idea.makeAhead;
+  await saveIdeas(`Toggle make-ahead for ${idea.title}`);
+}
 async function saveCooked(id){
   const idea = ideas.find(i => i.id === id);
   const starsWrap = document.getElementById('stars-' + id);
@@ -495,12 +507,14 @@ document.getElementById('add-btn').onclick = async () => {
   const source = document.getElementById('f-source').value.trim();
   const notes = document.getElementById('f-notes').value.trim();
   const protein = document.getElementById('f-protein').value.trim();
+  const makeAhead = document.getElementById('f-makeahead').checked;
   const ingredients = document.getElementById('f-ingredients').value.split('\n').map(s=>s.trim()).filter(Boolean);
-  ideas.unshift({ id: uid(), title, source, notes, protein, ingredients, status: 'idea', addedDate: new Date().toISOString() });
+  ideas.unshift({ id: uid(), title, source, notes, protein, makeAhead, ingredients, status: 'idea', addedDate: new Date().toISOString() });
   document.getElementById('f-title').value = '';
   document.getElementById('f-source').value = '';
   document.getElementById('f-notes').value = '';
   document.getElementById('f-protein').value = '';
+  document.getElementById('f-makeahead').checked = false;
   document.getElementById('f-ingredients').value = '';
   await saveIdeas(`Add ${title}`);
 };
