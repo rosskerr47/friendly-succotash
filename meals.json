@@ -720,5 +720,33 @@
     "feedback": "",
     "addedDate": "2026-09-12",
     "makeAhead": false
+  },
+  {
+    "id": "vietnamese-caramel-pork-mince",
+    "title": "Vietnamese Caramel Pork Mince",
+    "source": "Cookbook, p.113 (Stir-fries & Noodles)",
+    "notes": "Serves 4. Prep 5 min, cook 10 min. Can also be made with chicken, turkey, or beef mince instead of pork. Serve over rice or vermicelli noodles (not included in ingredients). Leftovers fridge 4 days, freezer 3 months.",
+    "protein": "pork mince",
+    "carbBase": "none specified (suggested: rice or vermicelli noodles)",
+    "ingredients": [
+      "1 1/2 tbsp canola oil",
+      "1/2 brown onion, finely diced",
+      "2 tsp ginger, finely minced",
+      "2 garlic cloves, finely minced",
+      "1 bird's eye chilli, deseeded and finely minced (optional)",
+      "500 g pork mince (or chicken, turkey or beef)",
+      "5 lightly packed tbsp (50 g) brown sugar",
+      "2 tbsp fish sauce",
+      "-- To serve --",
+      "1 green onion stem, finely sliced (optional)",
+      "red chilli, deseeded (if desired) and finely sliced (optional)",
+      "tomato wedges and cucumber chunks (optional)"
+    ],
+    "status": "idea",
+    "day": null,
+    "rating": null,
+    "feedback": "",
+    "addedDate": "2026-09-12",
+    "makeAhead": true
   }
 ]
