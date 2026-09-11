@@ -249,5 +249,33 @@
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08"
+  },
+  {
+    "id": "one-pot-chicken-broccoli-pasta-bake",
+    "title": "One-Pot Chicken & Broccoli Pasta Bake",
+    "source": "Cookbook, p.112 (One pot, pan or tray)",
+    "notes": "Serves 4. Prep 15 min, cook 40 min.",
+    "protein": "chicken breast",
+    "carbBase": "pasta bows",
+    "ingredients": [
+      "1 tablespoon extra-virgin olive oil",
+      "1 onion, finely chopped",
+      "2 garlic cloves, finely chopped",
+      "2 carrots, finely diced",
+      "2 x 250 g chicken breast fillets, diced",
+      "1 teaspoon dried Italian herbs or dried oregano",
+      "1 tablespoon butter",
+      "500 ml (2 cups) chicken stock",
+      "375 ml (1 1/2 cups) milk",
+      "375 g (4 cups) dried pasta bows",
+      "180 g (3 cups) finely chopped broccoli florets",
+      "50 g (1/2 cup) freshly grated parmesan",
+      "225 g (1 1/2 cups) freshly grated mozzarella"
+    ],
+    "status": "idea",
+    "day": null,
+    "rating": null,
+    "feedback": "",
+    "addedDate": "2026-09-08"
   }
 ]
