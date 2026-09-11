@@ -130,19 +130,19 @@
   <div id="sync-status" class="sync-status">not connected — set up GitHub in Settings</div>
 
   <nav class="tabs">
-    <button class="tab-btn active" data-tab="board">Board</button>
+    <button class="tab-btn active" data-tab="board">Meal Ideas</button>
     <button class="tab-btn" data-tab="week">Week</button>
     <button class="tab-btn" data-tab="shop">Shopping</button>
     <button class="tab-btn" data-tab="settings">Settings</button>
   </nav>
 
-  <div id="loading" class="loading" style="display:none;">Loading the board…</div>
+  <div id="loading" class="loading" style="display:none;">Loading meal ideas…</div>
 
   <!-- SETTINGS -->
   <div class="panel" id="panel-settings">
     <div class="settings-card">
       <h2>Connect GitHub</h2>
-      <div class="sub">This board reads and writes a single JSON file in this repo — that's the shared, durable copy. Do this once per device/browser.</div>
+      <div class="sub">This reads and writes a single JSON file in this repo — that's the shared, durable copy of your meal ideas. Do this once per device/browser.</div>
       <div class="steps">
         <b>One-time setup (in GitHub, not here):</b><br>
         1. GitHub → Settings → Developer settings → <a href="https://github.com/settings/personal-access-tokens/new" target="_blank">Fine-grained tokens</a> → New token.<br>
@@ -199,9 +199,9 @@
         <input type="checkbox" id="f-makeahead">
         <label for="f-makeahead">Good to make ahead (cook Sunday, reheat later in the week)</label>
       </div>
-      <button class="btn btn-primary" id="add-btn">Add to board</button>
+      <button class="btn btn-primary" id="add-btn">Add to meal ideas</button>
     </div>
-    <div class="section-label">On the board</div>
+    <div class="section-label">Meal ideas</div>
     <div id="active-list"></div>
     <div class="section-label">Cooked &amp; rated</div>
     <div id="cooked-list"></div>
@@ -213,7 +213,7 @@
     <button class="btn btn-mustard" id="generate-week-btn" style="width:100%;margin-bottom:14px;">Generate 5-day mix</button>
     <div id="generate-result" class="field-hint" style="margin-bottom:10px;"></div>
     <div id="week-list"></div>
-    <div class="field-hint" style="margin-top:14px;">Every meal on the board shows up as an option here — pick one per day. Selecting a day is what puts a meal "on this week." Generate applies the rules automatically: no repeated protein, at least one meat-free night, at least 2 make-ahead meals.</div>
+    <div class="field-hint" style="margin-top:14px;">Every meal idea shows up as an option here — pick one per day. Selecting a day is what puts a meal "on this week." Generate applies the rules automatically: no repeated protein, at least one meat-free night, at least 2 make-ahead meals.</div>
   </div>
 
   <!-- SHOPPING -->
@@ -289,7 +289,7 @@ document.getElementById('save-settings-btn').onclick = async () => {
     catch(e){ /* not fatal, just means re-entering next time */ }
   }
   const ok = await loadFromGitHub();
-  statusEl.textContent = ok ? 'Connected — switch to the Board tab.' : 'Could not connect — check the details above and the token\'s repo/permission scope.';
+  statusEl.textContent = ok ? 'Connected — switch to the Meal Ideas tab.' : 'Could not connect — check the details above and the token\'s repo/permission scope.';
 };
 
 /* ---- GitHub storage ---- */
@@ -391,7 +391,7 @@ function renderBoard(){
   const cooked = ideas.filter(i => i.status === 'cooked').sort((a,b)=> (b.rating||0)-(a.rating||0));
 
   const activeEl = document.getElementById('active-list');
-  activeEl.innerHTML = active.length ? '' : '<div class="empty">Nothing on the board yet — add the first idea above.</div>';
+  activeEl.innerHTML = active.length ? '' : '<div class="empty">No meal ideas yet — add the first one above.</div>';
   active.forEach(idea => {
     const card = document.createElement('div');
     card.className = 'idea';
@@ -552,7 +552,7 @@ function renderWeek(){
   });
   wrap.querySelectorAll('.day-select').forEach(sel => sel.onchange = () => setDay(sel.dataset.day, sel.value));
   if(!candidates.length){
-    wrap.insertAdjacentHTML('beforeend', '<div class="empty">No meals on the board yet — add some on the Board tab first.</div>');
+    wrap.insertAdjacentHTML('beforeend', '<div class="empty">No meal ideas logged yet — add some on the Meal Ideas tab first.</div>');
   }
 }
 
@@ -570,7 +570,7 @@ document.getElementById('generate-week-btn').onclick = async () => {
   const resultEl = document.getElementById('generate-result');
   const pool = ideas.filter(i => i.status !== 'cooked');
   if(pool.length < 5){
-    resultEl.textContent = `Only ${pool.length} meal(s) on the board — need at least 5 to generate a week.`;
+    resultEl.textContent = `Only ${pool.length} meal idea(s) logged — need at least 5 to generate a week.`;
     return;
   }
 
@@ -648,7 +648,7 @@ function renderPickList(){
       <div>
         <div class="pt">${esc(idea.title)}</div>
         ${idea.source ? `<div class="ps">${esc(idea.source)}</div>` : ''}
-        <div class="pn">${ingCount ? ingCount + ' ingredients' : 'No ingredients logged — add them on the Board tab'}</div>
+        <div class="pn">${ingCount ? ingCount + ' ingredients' : 'No ingredients logged — add them on the Meal Ideas tab'}</div>
       </div>
     `;
     wrap.appendChild(row);
