@@ -9,8 +9,9 @@
     "ingredients": [
       "Butterfly lamb"
     ],
-    "status": "idea",
-    "addedDate": "2026-09-11T22:53:15.407Z"
+    "status": "planned",
+    "addedDate": "2026-09-11T22:53:15.407Z",
+    "day": "Thu"
   },
   {
     "id": "id-mtxi8x6k-v9zfe8",
@@ -22,9 +23,9 @@
       "Butterfly chicken",
       "Vegetables"
     ],
-    "status": "planned",
+    "status": "idea",
     "addedDate": "2026-09-11T22:05:31.004Z",
-    "day": "Sun",
+    "day": null,
     "makeAhead": false
   },
   {
@@ -141,8 +142,8 @@
       "80 ml (1/3 cup) fish sauce",
       "3 tablespoons honey"
     ],
-    "status": "planned",
-    "day": "Mon",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -248,7 +249,7 @@
       "1/4 tsp caster sugar"
     ],
     "status": "planned",
-    "day": "Tue",
+    "day": "Wed",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -403,8 +404,8 @@
       "Packet rice",
       "Vegetables"
     ],
-    "status": "planned",
-    "day": "Thu",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -435,7 +436,7 @@
       "50 g (1/2 cup) freshly grated parmesan, plus extra to garnish",
       "1 tablespoon chopped flat-leaf parsley"
     ],
-    "status": "planned",
+    "status": "idea",
     "day": null,
     "rating": null,
     "feedback": "",
@@ -594,8 +595,8 @@
       "30 g unsalted butter, melted",
       "chopped parsley, to serve (optional)"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Tue",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -634,8 +635,8 @@
       "1/4 cup (5 g) roughly chopped fresh coriander",
       "chilli sauce or hot sauce (optional, e.g. sriracha)"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Sun",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -695,8 +696,8 @@
       "1 1/2 cups (150 g) shredded colby cheese (or any melting cheese)",
       "1 tsp finely chopped parsley, to serve (optional)"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Mon",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -755,8 +756,8 @@
       "red chilli, deseeded (if desired) and finely sliced (optional)",
       "tomato wedges and cucumber chunks (optional)"
     ],
-    "status": "planned",
-    "day": "Wed",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
