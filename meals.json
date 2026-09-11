@@ -115,5 +115,36 @@
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08"
+  },
+  {
+    "id": "one-pot-lasagne",
+    "title": "One-Pot Lasagne",
+    "source": "Cookbook, p.118 (One pot, pan or tray)",
+    "notes": "Serves 8. Prep 15 min, cook 65 min.",
+    "protein": "beef mince",
+    "carbBase": "lasagne sheets",
+    "ingredients": [
+      "3 tablespoons extra-virgin olive oil",
+      "2 onions, finely chopped",
+      "3 garlic cloves, finely chopped",
+      "1 carrot, grated (optional)",
+      "1 zucchini, grated (optional)",
+      "1 kg beef mince",
+      "2 bay leaves (optional)",
+      "3 tablespoons tomato paste",
+      "400 g can crushed tomatoes",
+      "700 g tomato passata",
+      "2 beef stock cubes (or 2 teaspoons beef stock powder)",
+      "salt flakes and freshly ground black pepper",
+      "250 g fresh lasagne sheets",
+      "150 g (1 cup) freshly grated mozzarella",
+      "2 x 125 g fresh buffalo mozzarella balls, cut into thick slices",
+      "basil leaves, to serve (optional)"
+    ],
+    "status": "idea",
+    "day": null,
+    "rating": null,
+    "feedback": "",
+    "addedDate": "2026-09-08"
   }
 ]
