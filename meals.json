@@ -9,9 +9,9 @@
       "Butterfly chicken",
       "Vegetables"
     ],
-    "status": "idea",
+    "status": "planned",
     "addedDate": "2026-09-11T22:05:31.004Z",
-    "day": null,
+    "day": "Sun",
     "makeAhead": false
   },
   {
@@ -57,8 +57,8 @@
     "protein": "beef/pork mince (unconfirmed)",
     "carbBase": "spaghetti",
     "ingredients": [],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Wed",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -161,7 +161,7 @@
       "basil leaves, to serve (optional)"
     ],
     "status": "planned",
-    "day": "Tue",
+    "day": "Mon",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -235,7 +235,7 @@
       "1/4 tsp caster sugar"
     ],
     "status": "planned",
-    "day": "Sun",
+    "day": "Thu",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -423,7 +423,7 @@
       "1 tablespoon chopped flat-leaf parsley"
     ],
     "status": "planned",
-    "day": "Thu",
+    "day": "Tue",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -458,8 +458,8 @@
       "1/2 teaspoon freshly ground black pepper",
       "3 tablespoons sour cream"
     ],
-    "status": "planned",
-    "day": "Mon",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -649,8 +649,8 @@
       "2 tsp finely minced ginger (optional)",
       "200 g pork mince"
     ],
-    "status": "planned",
-    "day": "Wed",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
