@@ -1,5 +1,18 @@
 [
   {
+    "id": "id-mtxjybdb-7oe6gb",
+    "title": "Butterfly lamb roast",
+    "source": "",
+    "notes": "",
+    "protein": "Lamb",
+    "makeAhead": false,
+    "ingredients": [
+      "Butterfly lamb"
+    ],
+    "status": "idea",
+    "addedDate": "2026-09-11T22:53:15.407Z"
+  },
+  {
     "id": "id-mtxi8x6k-v9zfe8",
     "title": "Butterfly chicken roast",
     "source": "",
