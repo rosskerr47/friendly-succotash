@@ -106,7 +106,7 @@
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
-    "makeAhead": false
+    "makeAhead": true
   },
   {
     "id": "thai-beef-bowls-zingy-salad",
@@ -395,7 +395,7 @@
     "id": "fish-and-vegetables",
     "title": "Fish & Vegetables",
     "source": "",
-    "notes": "Generic go-to, not a specific recipe \u2014 whatever fish and veg are on hand/fresh that week.",
+    "notes": "Generic go-to, not a specific recipe — whatever fish and veg are on hand/fresh that week.",
     "protein": "fish",
     "carbBase": "none (vegetables, not a starchy carb)",
     "ingredients": [
