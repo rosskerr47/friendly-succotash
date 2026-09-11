@@ -214,8 +214,10 @@
   <!-- WEEK -->
   <div class="panel" id="panel-week">
     <div class="section-label">This week, day by day</div>
+    <button class="btn btn-mustard" id="generate-week-btn" style="width:100%;margin-bottom:14px;">Generate 5-day mix</button>
+    <div id="generate-result" class="field-hint" style="margin-bottom:10px;"></div>
     <div id="week-list"></div>
-    <div class="field-hint" style="margin-top:14px;">Every meal on the board shows up as an option here — pick one per day. Selecting a day is what puts a meal "on this week."</div>
+    <div class="field-hint" style="margin-top:14px;">Every meal on the board shows up as an option here — pick one per day. Selecting a day is what puts a meal "on this week." Generate applies the rules automatically: no repeated protein, at least one meat-free night, at least 2 make-ahead meals.</div>
   </div>
 
   <!-- SHOPPING -->
@@ -558,6 +560,64 @@ async function setDay(day, ideaId){
   if(ideaId){ const idea = ideas.find(i => i.id === ideaId); if(idea){ idea.day = day; idea.status = 'planned'; } }
   await saveIdeas(`Assign ${day}`);
 }
+
+function isMeatFree(protein){
+  return /none|meat-free|tofu|vegetarian|cauliflower/i.test(protein || '');
+}
+
+document.getElementById('generate-week-btn').onclick = async () => {
+  const resultEl = document.getElementById('generate-result');
+  const pool = ideas.filter(i => i.status !== 'cooked');
+  if(pool.length < 5){
+    resultEl.textContent = `Only ${pool.length} meal(s) on the board — need at least 5 to generate a week.`;
+    return;
+  }
+
+  let best = null;
+  for(let attempt = 0; attempt < 300; attempt++){
+    const shuffled = [...pool].sort(() => Math.random() - 0.5);
+    const chosen = [];
+    const usedProteins = new Set();
+    for(const idea of shuffled){
+      if(chosen.length >= 5) break;
+      const p = (idea.protein || '').toLowerCase().trim();
+      const key = p || ('__blank_' + idea.id);
+      if(usedProteins.has(key)) continue;
+      chosen.push(idea);
+      usedProteins.add(key);
+    }
+    if(chosen.length < 5) continue;
+    const meatFreeCount = chosen.filter(i => isMeatFree(i.protein)).length;
+    const makeAheadCount = chosen.filter(i => i.makeAhead).length;
+    const score = (meatFreeCount >= 1 ? 1 : 0) + (makeAheadCount >= 2 ? 1 : 0);
+    if(!best || score > best.score){
+      best = { chosen, score, meatFreeCount, makeAheadCount };
+      if(score === 2) break;
+    }
+  }
+
+  if(!best){
+    resultEl.textContent = "Couldn't find 5 meals with distinct proteins — log a bit more variety and try again.";
+    return;
+  }
+
+  const chosenIds = new Set(best.chosen.map(i => i.id));
+  ideas.forEach(i => {
+    if(chosenIds.has(i.id)) return;
+    if(i.status === 'planned'){ i.status = 'idea'; i.day = null; }
+  });
+  DAY_NAMES.forEach((day, idx) => {
+    const idea = ideas.find(i => i.id === best.chosen[idx].id);
+    idea.day = day;
+    idea.status = 'planned';
+  });
+  await saveIdeas('Generate 5-day mix');
+
+  let msg = 'Generated.';
+  if(best.meatFreeCount < 1) msg += ' Note: no meat-free option was available — add one to satisfy that rule.';
+  if(best.makeAheadCount < 2) msg += ` Note: only ${best.makeAheadCount} make-ahead meal(s) available — mark more as make-ahead to satisfy that rule.`;
+  resultEl.textContent = msg;
+};
 async function assignDay(ideaId, day){
   if(day) ideas.forEach(i => { if(i.day === day) i.day = null; });
   const idea = ideas.find(i => i.id === ideaId);
@@ -572,7 +632,8 @@ function renderPickList(){
   const wrap = document.getElementById('pick-list');
   const candidates = ideas.filter(i => i.status !== 'cooked');
   if(!candidates.length){ wrap.innerHTML = '<div class="empty">Add some ideas on the Board tab first.</div>'; return; }
-  candidates.forEach(i => { if(i.status === 'planned') pickedIds.add(i.id); });
+  // sync to whatever's currently assigned a day in the Week tab
+  pickedIds = new Set(candidates.filter(i => i.status === 'planned').map(i => i.id));
   wrap.innerHTML = '';
   candidates.forEach(idea => {
     const row = document.createElement('label');
