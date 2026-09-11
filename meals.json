@@ -627,5 +627,33 @@
     "feedback": "",
     "addedDate": "2026-09-12",
     "makeAhead": false
+  },
+  {
+    "id": "spicy-sichuan-pork-noodles",
+    "title": "Spicy Sichuan Pork Noodles",
+    "source": "Cookbook, p.64 (Effortless)",
+    "notes": "Serves 2 only - scale up for the household. Prep 10 min, cook 8 min. High-heat char on beans/noodles is the point of the dish, best fresh. Leftovers fridge 3 days, not suitable for freezing. Note: pork works best but beef, chicken or turkey mince also fine as a swap.",
+    "protein": "pork mince",
+    "carbBase": "fresh Shanghai or hokkien noodles",
+    "ingredients": [
+      "-- Secret spicy Asian sauce --",
+      "1 1/2 tbsp oyster sauce",
+      "1 1/2 tbsp kecap manis",
+      "4 tsp sambal oelek (reduce to 1 tsp for mild, up to 6 tsp for very spicy)",
+      "-- Noodles --",
+      "250 g fresh Shanghai or hokkien noodles",
+      "2 tbsp vegetable oil",
+      "2 cups (200 g) green beans, ends trimmed and cut in half",
+      "1/2 brown onion, finely diced",
+      "1 garlic clove, finely minced",
+      "2 tsp finely minced ginger (optional)",
+      "200 g pork mince"
+    ],
+    "status": "idea",
+    "day": null,
+    "rating": null,
+    "feedback": "",
+    "addedDate": "2026-09-12",
+    "makeAhead": false
   }
 ]
