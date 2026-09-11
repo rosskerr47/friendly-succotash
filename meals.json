@@ -514,5 +514,33 @@
     "feedback": "",
     "addedDate": "2026-09-12",
     "makeAhead": true
+  },
+  {
+    "id": "three-cup-chicken-noodles",
+    "title": "Three-Cup Chicken Noodles",
+    "source": "Cookbook",
+    "notes": "Serves 4. Prep 10 min, cook 6 min. One pan. Stir-fry sauce can be mixed up to 3 days ahead and stored in the fridge. Leftovers keep in an airtight container in the fridge up to 3 days, not suitable to freeze.",
+    "protein": "chicken thigh",
+    "carbBase": "udon noodles",
+    "ingredients": [
+      "2 tablespoons extra-virgin olive oil",
+      "500 g chicken thigh fillets, cut into bite-sized pieces",
+      "1 tablespoon freshly grated ginger",
+      "1 tablespoon freshly grated garlic",
+      "450 g fresh udon noodles, prepared as per packet instructions",
+      "100 g (2 firmly packed cups) Thai basil leaves or regular basil",
+      "-- Stir-fry sauce --",
+      "3 tablespoons Chinese cooking wine",
+      "2 tablespoons all-purpose soy sauce",
+      "1 tablespoon dark soy sauce",
+      "1 tablespoon brown sugar",
+      "1 tablespoon sesame oil"
+    ],
+    "status": "idea",
+    "day": null,
+    "rating": null,
+    "feedback": "",
+    "addedDate": "2026-09-12",
+    "makeAhead": true
   }
 ]
