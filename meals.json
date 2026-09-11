@@ -382,7 +382,7 @@
     "id": "fish-and-vegetables",
     "title": "Fish & Vegetables",
     "source": "",
-    "notes": "Generic go-to, not a specific recipe — whatever fish and veg are on hand/fresh that week.",
+    "notes": "Generic go-to, not a specific recipe \u2014 whatever fish and veg are on hand/fresh that week.",
     "protein": "fish",
     "carbBase": "none (vegetables, not a starchy carb)",
     "ingredients": [
@@ -396,5 +396,37 @@
     "feedback": "",
     "addedDate": "2026-09-08",
     "makeAhead": false
+  },
+  {
+    "id": "cheesy-chicken-broccolini-rice",
+    "title": "Cheesy Chicken & Broccolini Rice",
+    "source": "Cookbook, p.112 (One-pan)",
+    "notes": "Serves 6. Prep 10 min, cook 30 min. One-pan risotto-style. Recipe explicitly supports make-ahead veg/chicken prep and reheats well (best reheated in microwave, piping hot).",
+    "protein": "chicken thigh",
+    "carbBase": "arborio rice",
+    "ingredients": [
+      "1 tablespoon olive oil",
+      "1 onion, finely diced",
+      "1 teaspoon freshly grated garlic",
+      "500 g chicken thigh fillets, cut into bite-sized pieces",
+      "1/2 teaspoon sea salt flakes, plus extra to taste",
+      "1/2 teaspoon freshly ground black pepper, plus extra to taste",
+      "1 teaspoon sweet paprika",
+      "1 teaspoon onion powder",
+      "1 teaspoon dried oregano, thyme or Italian mixed herbs",
+      "330 g (1 1/2 cups) arborio rice",
+      "1 litre (4 cups) chicken stock",
+      "125 ml (1/2 cup) thickened cream (optional)",
+      "1 bunch broccolini, cut into bite-sized pieces, or 1 small head broccoli, cut into florets",
+      "250 g (2 cups) freshly grated cheddar",
+      "50 g (1/2 cup) freshly grated parmesan, plus extra to garnish",
+      "1 tablespoon chopped flat-leaf parsley"
+    ],
+    "status": "idea",
+    "day": null,
+    "rating": null,
+    "feedback": "",
+    "addedDate": "2026-09-12",
+    "makeAhead": true
   }
 ]
