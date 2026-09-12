@@ -23,9 +23,9 @@
       "Butterfly chicken",
       "Vegetables"
     ],
-    "status": "idea",
+    "status": "planned",
     "addedDate": "2026-09-11T22:05:31.004Z",
-    "day": null,
+    "day": "Sun",
     "makeAhead": false
   },
   {
@@ -57,7 +57,7 @@
       "1 egg"
     ],
     "status": "planned",
-    "day": "Sun",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
