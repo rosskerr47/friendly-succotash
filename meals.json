@@ -310,7 +310,7 @@
       "225 g (1 1/2 cups) freshly grated mozzarella"
     ],
     "status": "planned",
-    "day": "Wed",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -728,8 +728,8 @@
       "1 tsp freshly ground black pepper",
       "1/8 tsp fish sauce"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Wed",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
