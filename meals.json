@@ -9,7 +9,7 @@
     "ingredients": [
       "Butterfly lamb"
     ],
-    "status": "planned",
+    "status": "idea",
     "addedDate": "2026-09-11T22:53:15.407Z",
     "day": null
   },
@@ -23,9 +23,9 @@
       "Butterfly chicken",
       "Vegetables"
     ],
-    "status": "planned",
+    "status": "idea",
     "addedDate": "2026-09-11T22:05:31.004Z",
-    "day": "Sun",
+    "day": null,
     "makeAhead": false
   },
   {
@@ -56,7 +56,7 @@
       "2 x 20cm frozen butter puff pastry sheets (or 1 large sheet)",
       "1 egg"
     ],
-    "status": "planned",
+    "status": "idea",
     "day": null,
     "rating": null,
     "feedback": "",
@@ -175,7 +175,7 @@
       "basil leaves, to serve (optional)"
     ],
     "status": "planned",
-    "day": "Mon",
+    "day": "Sun",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -248,8 +248,8 @@
       "1/4 tsp ground fennel seeds",
       "1/4 tsp caster sugar"
     ],
-    "status": "planned",
-    "day": "Tue",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -309,8 +309,8 @@
       "50 g (1/2 cup) freshly grated parmesan",
       "225 g (1 1/2 cups) freshly grated mozzarella"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Wed",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -346,8 +346,8 @@
       "1 tablespoon extra-virgin olive oil",
       "2 tablespoons unsalted butter, chopped and softened"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Tue",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -697,7 +697,7 @@
       "1 tsp finely chopped parsley, to serve (optional)"
     ],
     "status": "planned",
-    "day": "Wed",
+    "day": "Mon",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
