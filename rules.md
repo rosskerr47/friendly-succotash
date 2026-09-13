@@ -5,14 +5,22 @@ by either Ross or his wife, from any conversation with Claude.
 
 ## Variety rules
 - **No repeated protein** across the 5 days (e.g. don't pick beef mince twice).
-- **At least one meat-free night** in the 5.
+  Protein is a single-word category: `chicken`, `beef`, `pork`, `lamb`, `fish`,
+  or `veggie` (tofu, cauliflower mac & cheese, etc. all group under `veggie`).
+- **At least one meat-free night** in the 5 — i.e. at least one `veggie` meal.
 - **At least 2 make-ahead meals** in the 5 — meals marked `makeAhead: true`, meaning they
   can be fully or mostly cooked on the weekend and reheated later in the week.
+- **No more than 1 pasta meal** in the 5 (spaghetti, lasagne, macaroni, rigatoni, pasta
+  bows, etc. — based on `carbBase`). Asian noodle dishes (udon, hokkien) don't count
+  as pasta for this rule.
 
 ## Week structure
 - The week runs **Sunday through Thursday** (5 days) — the big grocery shop happens
   on the weekend and covers dinners through Thursday night. Friday and Saturday are
   not part of this rotation.
+- **Sunday defaults to a butterfly chicken or butterfly lamb roast** if one is logged
+  (title contains "butterfly") — picked before the other 4 days are filled, so it
+  doesn't get displaced by the variety-rule search.
 
 ## Data format
 `meals.json` is an array of recipe objects. Each has:

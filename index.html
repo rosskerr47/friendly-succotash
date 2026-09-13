@@ -124,7 +124,7 @@
     <div class="eyebrow">Household · Meal Planning</div>
     <h1>Meal Planning</h1>
     <p>Drop ideas in as you find them. Rate the ones you've cooked. Build the list when you're ready to shop.</p>
-    <div class="rules-line">Rules: no repeated protein · at least one meat-free night · at least 2 make-ahead meals · week runs Sun–Thu</div>
+    <div class="rules-line">Rules: no repeated protein · at least one meat-free night · at least 2 make-ahead meals · no 2 pasta meals · Sunday defaults to a butterfly chicken/lamb roast · week runs Sun–Thu</div>
   </header>
 
   <div id="sync-status" class="sync-status">not connected — set up GitHub in Settings</div>
@@ -213,7 +213,7 @@
     <button class="btn btn-mustard" id="generate-week-btn" style="width:100%;margin-bottom:14px;">Generate 5-day mix</button>
     <div id="generate-result" class="field-hint" style="margin-bottom:10px;"></div>
     <div id="week-list"></div>
-    <div class="field-hint" style="margin-top:14px;">Every meal idea shows up as an option here — pick one per day. Selecting a day is what puts a meal "on this week." Generate applies the rules automatically: no repeated protein, at least one meat-free night, at least 2 make-ahead meals.</div>
+    <div class="field-hint" style="margin-top:14px;">Every meal idea shows up as an option here — pick one per day. Selecting a day is what puts a meal "on this week." Generate applies the rules automatically: no repeated protein, at least one meat-free night, at least 2 make-ahead meals, no 2 pasta meals, and Sunday defaults to a butterfly chicken/lamb roast.</div>
   </div>
 
   <!-- SHOPPING -->
@@ -588,58 +588,81 @@ async function setDay(day, ideaId){
 function isMeatFree(protein){
   return /veggie|none|meat-free|tofu|vegetarian/i.test(protein || '');
 }
+function isPasta(carbBase){
+  return /\bpasta\b|spaghetti|lasagne|macaroni|rigatoni|penne|fettuccine|linguine|farfalle|tagliatelle/i.test(carbBase || '');
+}
 
 document.getElementById('generate-week-btn').onclick = async () => {
   const resultEl = document.getElementById('generate-result');
   const pool = ideas.filter(i => i.status !== 'cooked');
-  if(pool.length < 5){
-    resultEl.textContent = `Only ${pool.length} meal idea(s) logged — need at least 5 to generate a week.`;
+
+  const sundayCandidates = pool.filter(i => /butterfly/i.test(i.title));
+  const sundayPick = sundayCandidates.length
+    ? sundayCandidates[Math.floor(Math.random() * sundayCandidates.length)]
+    : null;
+
+  const remainingDays = sundayPick ? DAY_NAMES.slice(1) : DAY_NAMES;
+  const restPool = sundayPick ? pool.filter(i => i.id !== sundayPick.id) : pool;
+  const neededCount = remainingDays.length;
+
+  if(restPool.length < neededCount){
+    resultEl.textContent = `Only ${restPool.length} other meal idea(s) logged — need ${neededCount} more to fill the week.`;
     return;
   }
 
   let best = null;
   for(let attempt = 0; attempt < 300; attempt++){
-    const shuffled = [...pool].sort(() => Math.random() - 0.5);
+    const shuffled = [...restPool].sort(() => Math.random() - 0.5);
     const chosen = [];
     const usedProteins = new Set();
+    if(sundayPick){
+      const sp = (sundayPick.protein || '').toLowerCase().trim();
+      usedProteins.add(sp || ('__blank_' + sundayPick.id));
+    }
     for(const idea of shuffled){
-      if(chosen.length >= 5) break;
+      if(chosen.length >= neededCount) break;
       const p = (idea.protein || '').toLowerCase().trim();
       const key = p || ('__blank_' + idea.id);
       if(usedProteins.has(key)) continue;
       chosen.push(idea);
       usedProteins.add(key);
     }
-    if(chosen.length < 5) continue;
-    const meatFreeCount = chosen.filter(i => isMeatFree(i.protein)).length;
-    const makeAheadCount = chosen.filter(i => i.makeAhead).length;
-    const score = (meatFreeCount >= 1 ? 1 : 0) + (makeAheadCount >= 2 ? 1 : 0);
+    if(chosen.length < neededCount) continue;
+
+    const full = sundayPick ? [sundayPick, ...chosen] : chosen;
+    const meatFreeCount = full.filter(i => isMeatFree(i.protein)).length;
+    const makeAheadCount = full.filter(i => i.makeAhead).length;
+    const pastaCount = full.filter(i => isPasta(i.carbBase)).length;
+    const score = (meatFreeCount >= 1 ? 1 : 0) + (makeAheadCount >= 2 ? 1 : 0) + (pastaCount <= 1 ? 1 : 0);
     if(!best || score > best.score){
-      best = { chosen, score, meatFreeCount, makeAheadCount };
-      if(score === 2) break;
+      best = { chosen, score, meatFreeCount, makeAheadCount, pastaCount };
+      if(score === 3) break;
     }
   }
 
   if(!best){
-    resultEl.textContent = "Couldn't find 5 meals with distinct proteins — log a bit more variety and try again.";
+    resultEl.textContent = "Couldn't find enough meals with distinct proteins — log a bit more variety and try again.";
     return;
   }
 
-  const chosenIds = new Set(best.chosen.map(i => i.id));
+  const finalChosen = sundayPick ? [sundayPick, ...best.chosen] : best.chosen;
+  const chosenIds = new Set(finalChosen.map(i => i.id));
   ideas.forEach(i => {
     if(chosenIds.has(i.id)) return;
     if(i.status === 'planned'){ i.status = 'idea'; i.day = null; }
   });
   DAY_NAMES.forEach((day, idx) => {
-    const idea = ideas.find(i => i.id === best.chosen[idx].id);
+    const idea = ideas.find(i => i.id === finalChosen[idx].id);
     idea.day = day;
     idea.status = 'planned';
   });
   await saveIdeas('Generate 5-day mix');
 
   let msg = 'Generated.';
+  if(!sundayPick) msg += ' Note: no butterfly chicken/lamb roast logged — Sunday was filled normally instead.';
   if(best.meatFreeCount < 1) msg += ' Note: no meat-free option was available — add one to satisfy that rule.';
   if(best.makeAheadCount < 2) msg += ` Note: only ${best.makeAheadCount} make-ahead meal(s) available — mark more as make-ahead to satisfy that rule.`;
+  if(best.pastaCount >= 2) msg += ` Note: couldn't avoid 2 pasta meals this time — log more non-pasta variety to fix that.`;
   resultEl.textContent = msg;
 };
 async function assignDay(ideaId, day){
