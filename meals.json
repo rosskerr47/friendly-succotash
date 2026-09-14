@@ -9,9 +9,9 @@
     "ingredients": [
       "Butterfly lamb"
     ],
-    "status": "idea",
+    "status": "planned",
     "addedDate": "2026-09-11T22:53:15.407Z",
-    "day": null
+    "day": "Sun"
   },
   {
     "id": "id-mtxi8x6k-v9zfe8",
@@ -23,9 +23,9 @@
       "Butterfly chicken",
       "Vegetables"
     ],
-    "status": "planned",
+    "status": "idea",
     "addedDate": "2026-09-11T22:05:31.004Z",
-    "day": "Sun",
+    "day": null,
     "makeAhead": false
   },
   {
@@ -142,8 +142,8 @@
       "80 ml (1/3 cup) fish sauce",
       "3 tablespoons honey"
     ],
-    "status": "planned",
-    "day": "Wed",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -174,7 +174,7 @@
       "2 x 125 g fresh buffalo mozzarella balls, cut into thick slices",
       "basil leaves, to serve (optional)"
     ],
-    "status": "planned",
+    "status": "idea",
     "day": null,
     "rating": null,
     "feedback": "",
@@ -248,8 +248,8 @@
       "1/4 tsp ground fennel seeds",
       "1/4 tsp caster sugar"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Thu",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -309,7 +309,7 @@
       "50 g (1/2 cup) freshly grated parmesan",
       "225 g (1 1/2 cups) freshly grated mozzarella"
     ],
-    "status": "planned",
+    "status": "idea",
     "day": null,
     "rating": null,
     "feedback": "",
@@ -346,8 +346,8 @@
       "1 tablespoon extra-virgin olive oil",
       "2 tablespoons unsalted butter, chopped and softened"
     ],
-    "status": "planned",
-    "day": "Thu",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -404,8 +404,8 @@
       "Packet rice",
       "Vegetables"
     ],
-    "status": "planned",
-    "day": "Tue",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -472,8 +472,8 @@
       "1/2 teaspoon freshly ground black pepper",
       "3 tablespoons sour cream"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Mon",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -697,7 +697,7 @@
       "1 tsp finely chopped parsley, to serve (optional)"
     ],
     "status": "planned",
-    "day": "Mon",
+    "day": "Tue",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -729,7 +729,7 @@
       "1/8 tsp fish sauce"
     ],
     "status": "planned",
-    "day": null,
+    "day": "Wed",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
