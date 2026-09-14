@@ -9,9 +9,9 @@
     "ingredients": [
       "Butterfly lamb"
     ],
-    "status": "planned",
+    "status": "idea",
     "addedDate": "2026-09-11T22:53:15.407Z",
-    "day": "Sun"
+    "day": null
   },
   {
     "id": "id-mtxi8x6k-v9zfe8",
@@ -23,9 +23,9 @@
       "Butterfly chicken",
       "Vegetables"
     ],
-    "status": "idea",
+    "status": "planned",
     "addedDate": "2026-09-11T22:05:31.004Z",
-    "day": null,
+    "day": "Sun",
     "makeAhead": false
   },
   {
@@ -249,7 +249,7 @@
       "1/4 tsp caster sugar"
     ],
     "status": "planned",
-    "day": "Thu",
+    "day": "Wed",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -404,8 +404,8 @@
       "Packet rice",
       "Vegetables"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Thu",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -472,8 +472,8 @@
       "1/2 teaspoon freshly ground black pepper",
       "3 tablespoons sour cream"
     ],
-    "status": "planned",
-    "day": "Mon",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -595,8 +595,8 @@
       "30 g unsalted butter, melted",
       "chopped parsley, to serve (optional)"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Mon",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -696,8 +696,8 @@
       "1 1/2 cups (150 g) shredded colby cheese (or any melting cheese)",
       "1 tsp finely chopped parsley, to serve (optional)"
     ],
-    "status": "planned",
-    "day": "Tue",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -728,8 +728,8 @@
       "1 tsp freshly ground black pepper",
       "1/8 tsp fish sauce"
     ],
-    "status": "planned",
-    "day": "Wed",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -756,8 +756,8 @@
       "red chilli, deseeded (if desired) and finely sliced (optional)",
       "tomato wedges and cucumber chunks (optional)"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Tue",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
