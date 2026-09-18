@@ -9,9 +9,9 @@
     "ingredients": [
       "Butterfly lamb"
     ],
-    "status": "idea",
+    "status": "planned",
     "addedDate": "2026-09-11T22:53:15.407Z",
-    "day": null
+    "day": "Wed"
   },
   {
     "id": "id-mtxi8x6k-v9zfe8",
@@ -249,7 +249,7 @@
       "1/4 tsp caster sugar"
     ],
     "status": "planned",
-    "day": "Wed",
+    "day": "Mon",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -404,8 +404,8 @@
       "Packet rice",
       "Vegetables"
     ],
-    "status": "planned",
-    "day": "Thu",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -596,7 +596,7 @@
       "chopped parsley, to serve (optional)"
     ],
     "status": "planned",
-    "day": "Mon",
+    "day": "Tue",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -696,8 +696,8 @@
       "1 1/2 cups (150 g) shredded colby cheese (or any melting cheese)",
       "1 tsp finely chopped parsley, to serve (optional)"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Thu",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -756,8 +756,8 @@
       "red chilli, deseeded (if desired) and finely sliced (optional)",
       "tomato wedges and cucumber chunks (optional)"
     ],
-    "status": "planned",
-    "day": "Tue",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
