@@ -9,9 +9,9 @@
     "ingredients": [
       "Butterfly lamb"
     ],
-    "status": "planned",
+    "status": "idea",
     "addedDate": "2026-09-11T22:53:15.407Z",
-    "day": "Wed"
+    "day": null
   },
   {
     "id": "id-mtxi8x6k-v9zfe8",
@@ -174,8 +174,8 @@
       "2 x 125 g fresh buffalo mozzarella balls, cut into thick slices",
       "basil leaves, to serve (optional)"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Tue",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -249,7 +249,7 @@
       "1/4 tsp caster sugar"
     ],
     "status": "planned",
-    "day": "Mon",
+    "day": "Thu",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -404,8 +404,8 @@
       "Packet rice",
       "Vegetables"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Wed",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -595,8 +595,8 @@
       "30 g unsalted butter, melted",
       "chopped parsley, to serve (optional)"
     ],
-    "status": "planned",
-    "day": "Tue",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -696,8 +696,8 @@
       "1 1/2 cups (150 g) shredded colby cheese (or any melting cheese)",
       "1 tsp finely chopped parsley, to serve (optional)"
     ],
-    "status": "planned",
-    "day": "Thu",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -756,8 +756,8 @@
       "red chilli, deseeded (if desired) and finely sliced (optional)",
       "tomato wedges and cucumber chunks (optional)"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Mon",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
