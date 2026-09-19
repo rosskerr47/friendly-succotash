@@ -11,7 +11,7 @@
     ],
     "status": "planned",
     "addedDate": "2026-09-11T22:53:15.407Z",
-    "day": "Tue"
+    "day": "Sun"
   },
   {
     "id": "id-mtxi8x6k-v9zfe8",
@@ -23,9 +23,9 @@
       "Butterfly chicken",
       "Vegetables"
     ],
-    "status": "planned",
+    "status": "idea",
     "addedDate": "2026-09-11T22:05:31.004Z",
-    "day": "Sun",
+    "day": null,
     "makeAhead": false
   },
   {
@@ -250,7 +250,7 @@
       "1/4 tsp caster sugar"
     ],
     "status": "planned",
-    "day": "Wed",
+    "day": "Tue",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -437,8 +437,8 @@
       "50 g (1/2 cup) freshly grated parmesan, plus extra to garnish",
       "1 tablespoon chopped flat-leaf parsley"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Mon",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -664,8 +664,8 @@
       "2 tsp finely minced ginger (optional)",
       "200 g pork mince"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Wed",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -758,8 +758,8 @@
       "red chilli, deseeded (if desired) and finely sliced (optional)",
       "tomato wedges and cucumber chunks (optional)"
     ],
-    "status": "planned",
-    "day": "Mon",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
