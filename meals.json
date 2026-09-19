@@ -9,9 +9,9 @@
     "ingredients": [
       "Butterfly lamb"
     ],
-    "status": "idea",
+    "status": "planned",
     "addedDate": "2026-09-11T22:53:15.407Z",
-    "day": null
+    "day": "Sun"
   },
   {
     "id": "id-mtxi8x6k-v9zfe8",
@@ -23,9 +23,9 @@
       "Butterfly chicken",
       "Vegetables"
     ],
-    "status": "planned",
+    "status": "idea",
     "addedDate": "2026-09-11T22:05:31.004Z",
-    "day": "Sun",
+    "day": null,
     "makeAhead": false
   },
   {
@@ -56,8 +56,8 @@
       "2 x 20cm frozen butter puff pastry sheets (or 1 large sheet)",
       "1 egg"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Mon",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -174,8 +174,8 @@
       "2 x 125 g fresh buffalo mozzarella balls, cut into thick slices",
       "basil leaves, to serve (optional)"
     ],
-    "status": "planned",
-    "day": "Tue",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -249,7 +249,7 @@
       "1/4 tsp caster sugar"
     ],
     "status": "planned",
-    "day": "Thu",
+    "day": "Tue",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -405,7 +405,7 @@
       "Vegetables"
     ],
     "status": "planned",
-    "day": "Wed",
+    "day": "Thu",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -757,7 +757,7 @@
       "tomato wedges and cucumber chunks (optional)"
     ],
     "status": "planned",
-    "day": "Mon",
+    "day": "Wed",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
