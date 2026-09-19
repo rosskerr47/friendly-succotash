@@ -9,9 +9,9 @@
     "ingredients": [
       "Butterfly lamb"
     ],
-    "status": "planned",
+    "status": "idea",
     "addedDate": "2026-09-11T22:53:15.407Z",
-    "day": "Mon"
+    "day": null
   },
   {
     "id": "id-mtxi8x6k-v9zfe8",
@@ -250,7 +250,7 @@
       "1/4 tsp caster sugar"
     ],
     "status": "planned",
-    "day": "Wed",
+    "day": "Thu",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -405,8 +405,8 @@
       "Packet rice",
       "Vegetables"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Mon",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -597,7 +597,7 @@
       "chopped parsley, to serve (optional)"
     ],
     "status": "planned",
-    "day": "Thu",
+    "day": "Wed",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
