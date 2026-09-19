@@ -11,7 +11,7 @@
     ],
     "status": "planned",
     "addedDate": "2026-09-11T22:53:15.407Z",
-    "day": "Sun"
+    "day": "Thu"
   },
   {
     "id": "id-mtxi8x6k-v9zfe8",
@@ -23,9 +23,9 @@
       "Butterfly chicken",
       "Vegetables"
     ],
-    "status": "idea",
+    "status": "planned",
     "addedDate": "2026-09-11T22:05:31.004Z",
-    "day": null,
+    "day": "Sun",
     "makeAhead": false
   },
   {
@@ -102,8 +102,8 @@
       "1 cup sweet corn (canned or frozen)",
       "Shredded cheese, lime wedges, sour cream, chopped tomatoes, cilantro, avocado, tortilla chips (optional, to serve)"
     ],
-    "status": "planned",
-    "day": "Wed",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -249,8 +249,8 @@
       "1/4 tsp ground fennel seeds",
       "1/4 tsp caster sugar"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Tue",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -347,8 +347,8 @@
       "1 tablespoon extra-virgin olive oil",
       "2 tablespoons unsalted butter, chopped and softened"
     ],
-    "status": "planned",
-    "day": "Thu",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -523,8 +523,8 @@
       "1/4 teaspoon freshly ground black pepper",
       "300 g (4 cups) finely shredded green cabbage"
     ],
-    "status": "planned",
-    "day": "Tue",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -596,8 +596,8 @@
       "30 g unsalted butter, melted",
       "chopped parsley, to serve (optional)"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Mon",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -759,7 +759,7 @@
       "tomato wedges and cucumber chunks (optional)"
     ],
     "status": "planned",
-    "day": "Mon",
+    "day": "Wed",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
