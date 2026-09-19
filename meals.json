@@ -814,5 +814,43 @@
     "feedback": "",
     "addedDate": "2026-09-19",
     "makeAhead": true
+  },
+  {
+    "id": "glazed-miso-salmon-ramen-noodles",
+    "title": "Glazed Miso Salmon Ramen Noodles",
+    "source": "https://simplehomeedit.com/recipe/glazed-miso-salmon-ramen-noodles/",
+    "notes": "Serves 4. Prep 10 min, cook 15 min, oven-baked (no stove-hovering). Can substitute udon, soba, rice noodles or spaghetti for the ramen. Make ahead: marinate salmon up to 24 hours ahead; sesame-spring onion sauce up to 2 days ahead; cook noodles fresh for best texture. Leftovers: salmon and noodles stored separately, fridge 2 days, reheat gently in microwave, not suitable for freezing.",
+    "protein": "fish",
+    "carbBase": "ramen noodles",
+    "ingredients": [
+      "-- Miso glazed salmon --",
+      "2 tbsp miso paste (white or red)",
+      "2 tbsp tamari or all-purpose soy sauce",
+      "1 tbsp sesame oil",
+      "1 tbsp brown sugar",
+      "2 tbsp rice wine vinegar",
+      "4 pieces skin-on salmon fillets (about 125 g each)",
+      "-- Sesame spring onion sauce --",
+      "1 tbsp freshly grated garlic",
+      "1 tbsp freshly grated ginger",
+      "5 spring onions, finely chopped",
+      "125 ml (1/2 cup) extra-virgin olive oil or neutral oil",
+      "3 tbsp all-purpose soy sauce",
+      "2 tbsp rice wine vinegar",
+      "1 tbsp sesame oil",
+      "1 tsp brown sugar",
+      "-- To serve --",
+      "360 g ramen noodles (or 4 x 85 g instant noodle packets, seasoning discarded)",
+      "1 bunch Chinese broccoli (gai lan), cut into 2 cm pieces, stems and leaves separated",
+      "10 g chopped coriander leaves",
+      "1 tsp sesame seeds",
+      "chilli oil (optional)"
+    ],
+    "status": "idea",
+    "day": null,
+    "rating": null,
+    "feedback": "",
+    "addedDate": "2026-09-19",
+    "makeAhead": true
   }
 ]
