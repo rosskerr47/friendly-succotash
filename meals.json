@@ -11,7 +11,7 @@
     ],
     "status": "planned",
     "addedDate": "2026-09-11T22:53:15.407Z",
-    "day": "Thu"
+    "day": "Tue"
   },
   {
     "id": "id-mtxi8x6k-v9zfe8",
@@ -249,8 +249,8 @@
       "1/4 tsp ground fennel seeds",
       "1/4 tsp caster sugar"
     ],
-    "status": "planned",
-    "day": "Tue",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -347,8 +347,8 @@
       "1 tablespoon extra-virgin olive oil",
       "2 tablespoons unsalted butter, chopped and softened"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Thu",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
