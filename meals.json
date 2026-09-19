@@ -852,5 +852,41 @@
     "feedback": "",
     "addedDate": "2026-09-19",
     "makeAhead": true
+  },
+  {
+    "id": "baked-chicken-rissoles",
+    "title": "Baked Chicken Rissoles",
+    "source": "https://simplehomeedit.com/recipe/baked-chicken-rissoles/",
+    "notes": "Serves 4 (makes 12 rissoles). Prep 10 min, cook 20 min. Oven-baked or air fryer, no stovetop splatter. Can substitute turkey or pork mince for chicken. Suggested sides: mashed potatoes, Creamy Garlic Cucumber Salad. Make ahead: refrigerate uncooked up to 2 days, or freeze raw up to 2 months (bake from frozen adding 5-8 min). Leftovers: fridge 3 days or freeze 2 months, reheat directly from frozen in air fryer or oven.",
+    "protein": "chicken",
+    "carbBase": "none specified (breadcrumb-coated, served with mashed potato side)",
+    "ingredients": [
+      "-- Rissoles --",
+      "olive oil spray",
+      "500 g minced chicken (can substitute turkey or pork mince)",
+      "1 small onion, grated",
+      "1 tsp freshly minced garlic",
+      "1 tbsp chopped fresh flat-leaf parsley, plus extra to serve",
+      "20 g panko breadcrumbs",
+      "1 egg",
+      "1 tsp chicken stock powder",
+      "freshly cracked black pepper, to season",
+      "-- Coating --",
+      "1 tsp sweet paprika",
+      "40 g panko breadcrumbs",
+      "35 g freshly grated parmesan",
+      "1/4 tsp sea salt flakes",
+      "1/4 tsp freshly cracked black pepper",
+      "-- Serving suggestions --",
+      "lemon wedges (optional)",
+      "freezer-friendly mashed potatoes",
+      "creamy garlic cucumber salad (not dairy free)"
+    ],
+    "status": "idea",
+    "day": null,
+    "rating": null,
+    "feedback": "",
+    "addedDate": "2026-09-19",
+    "makeAhead": true
   }
 ]
