@@ -11,7 +11,7 @@
     ],
     "status": "planned",
     "addedDate": "2026-09-11T22:53:15.407Z",
-    "day": "Sun"
+    "day": "Tue"
   },
   {
     "id": "id-mtxi8x6k-v9zfe8",
@@ -23,9 +23,9 @@
       "Butterfly chicken",
       "Vegetables"
     ],
-    "status": "idea",
+    "status": "planned",
     "addedDate": "2026-09-11T22:05:31.004Z",
-    "day": null,
+    "day": "Sun",
     "makeAhead": false
   },
   {
@@ -56,8 +56,8 @@
       "2 x 20cm frozen butter puff pastry sheets (or 1 large sheet)",
       "1 egg"
     ],
-    "status": "planned",
-    "day": "Mon",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -250,7 +250,7 @@
       "1/4 tsp caster sugar"
     ],
     "status": "planned",
-    "day": "Tue",
+    "day": "Wed",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -405,8 +405,8 @@
       "Packet rice",
       "Vegetables"
     ],
-    "status": "planned",
-    "day": "Thu",
+    "status": "idea",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -596,8 +596,8 @@
       "30 g unsalted butter, melted",
       "chopped parsley, to serve (optional)"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Thu",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -759,7 +759,7 @@
       "tomato wedges and cucumber chunks (optional)"
     ],
     "status": "planned",
-    "day": "Wed",
+    "day": "Mon",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
