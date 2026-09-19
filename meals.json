@@ -697,12 +697,13 @@
       "1 1/2 cups (150 g) shredded colby cheese (or any melting cheese)",
       "1 tsp finely chopped parsley, to serve (optional)"
     ],
-    "status": "idea",
+    "status": "cooked",
     "day": null,
-    "rating": null,
+    "rating": 4,
     "feedback": "",
     "addedDate": "2026-09-12",
-    "makeAhead": false
+    "makeAhead": false,
+    "cookedDate": "2026-09-19T02:14:03.246Z"
   },
   {
     "id": "vietnamese-shaking-beef",
