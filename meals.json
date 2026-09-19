@@ -179,7 +179,7 @@
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
-    "makeAhead": false
+    "makeAhead": true
   },
   {
     "id": "chicken-korma-bake",
