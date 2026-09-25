@@ -102,8 +102,8 @@
       "1 cup sweet corn (canned or frozen)",
       "Shredded cheese, lime wedges, sour cream, chopped tomatoes, cilantro, avocado, tortilla chips (optional, to serve)"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Mon",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
@@ -397,7 +397,7 @@
     "id": "fish-and-vegetables",
     "title": "Fish & Vegetables",
     "source": "",
-    "notes": "Generic go-to, not a specific recipe \u2014 whatever fish and veg are on hand/fresh that week.",
+    "notes": "Generic go-to, not a specific recipe — whatever fish and veg are on hand/fresh that week.",
     "protein": "fish",
     "carbBase": "none (vegetables, not a starchy carb)",
     "ingredients": [
@@ -406,7 +406,7 @@
       "Vegetables"
     ],
     "status": "planned",
-    "day": "Mon",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-08",
