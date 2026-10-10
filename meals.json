@@ -8,7 +8,8 @@
     "makeAhead": false,
     "ingredients": [],
     "status": "planned",
-    "addedDate": "2026-10-10T01:45:37.420Z"
+    "addedDate": "2026-10-10T01:45:37.420Z",
+    "day": "Thu"
   },
   {
     "id": "id-mv1qdx2g-327j11",
@@ -782,7 +783,7 @@
       "tomato wedges and cucumber chunks (optional)"
     ],
     "status": "planned",
-    "day": "Thu",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
