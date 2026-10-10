@@ -754,7 +754,7 @@
       "1/8 tsp fish sauce"
     ],
     "status": "planned",
-    "day": "Wed",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
@@ -869,8 +869,8 @@
       "1 tsp sesame seeds",
       "chilli oil (optional)"
     ],
-    "status": "idea",
-    "day": null,
+    "status": "planned",
+    "day": "Wed",
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-19",
