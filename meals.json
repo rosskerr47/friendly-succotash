@@ -18,8 +18,9 @@
     "protein": "",
     "makeAhead": false,
     "ingredients": [],
-    "status": "idea",
-    "addedDate": "2026-10-10T01:44:08.104Z"
+    "status": "planned",
+    "addedDate": "2026-10-10T01:44:08.104Z",
+    "day": "Mon"
   },
   {
     "id": "id-mtxjybdb-7oe6gb",
@@ -546,7 +547,7 @@
       "300 g (4 cups) finely shredded green cabbage"
     ],
     "status": "planned",
-    "day": "Mon",
+    "day": null,
     "rating": null,
     "feedback": "",
     "addedDate": "2026-09-12",
